@@ -55,6 +55,12 @@
             this.groupActions = new System.Windows.Forms.GroupBox();
             this.btCancelReg = new System.Windows.Forms.Button();
             this.btHide = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.tbObservacoes = new System.Windows.Forms.TextBox();
+            this.checkCPF = new System.Windows.Forms.CheckBox();
+            this.checkObservacao = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.MenuBar.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -74,6 +80,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkObservacao);
+            this.groupBox1.Controls.Add(this.checkCPF);
+            this.groupBox1.Controls.Add(this.tbObservacoes);
+            this.groupBox1.Controls.Add(this.mtbCPF);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btClean);
             this.groupBox1.Controls.Add(this.btAlterar);
             this.groupBox1.Controls.Add(this.btGenerate);
@@ -91,7 +103,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 162);
+            this.groupBox1.Size = new System.Drawing.Size(351, 251);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Usuário";
@@ -104,7 +116,7 @@
             this.btClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClean.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btClean.Location = new System.Drawing.Point(101, 133);
+            this.btClean.Location = new System.Drawing.Point(101, 222);
             this.btClean.Name = "btClean";
             this.btClean.Size = new System.Drawing.Size(86, 23);
             this.btClean.TabIndex = 16;
@@ -121,7 +133,7 @@
             this.btAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlterar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btAlterar.Location = new System.Drawing.Point(9, 133);
+            this.btAlterar.Location = new System.Drawing.Point(9, 222);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(86, 23);
             this.btAlterar.TabIndex = 15;
@@ -138,7 +150,7 @@
             this.btGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGenerate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btGenerate.Location = new System.Drawing.Point(193, 133);
+            this.btGenerate.Location = new System.Drawing.Point(193, 222);
             this.btGenerate.Name = "btGenerate";
             this.btGenerate.Size = new System.Drawing.Size(152, 23);
             this.btGenerate.TabIndex = 14;
@@ -150,19 +162,18 @@
             // 
             this.tbCargo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.tbCargo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbCargo.Location = new System.Drawing.Point(47, 102);
+            this.tbCargo.Location = new System.Drawing.Point(68, 102);
             this.tbCargo.Name = "tbCargo";
-            this.tbCargo.ReadOnly = true;
-            this.tbCargo.Size = new System.Drawing.Size(298, 20);
+            this.tbCargo.Size = new System.Drawing.Size(277, 20);
             this.tbCargo.TabIndex = 13;
             // 
             // cbLocal
             // 
             this.cbLocal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbLocal.FormattingEnabled = true;
-            this.cbLocal.Location = new System.Drawing.Point(47, 74);
+            this.cbLocal.Location = new System.Drawing.Point(68, 74);
             this.cbLocal.Name = "cbLocal";
-            this.cbLocal.Size = new System.Drawing.Size(298, 21);
+            this.cbLocal.Size = new System.Drawing.Size(277, 21);
             this.cbLocal.TabIndex = 12;
             // 
             // cbEmail
@@ -198,9 +209,9 @@
             // tbNome
             // 
             this.tbNome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbNome.Location = new System.Drawing.Point(47, 19);
+            this.tbNome.Location = new System.Drawing.Point(68, 19);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(298, 20);
+            this.tbNome.Size = new System.Drawing.Size(277, 20);
             this.tbNome.TabIndex = 8;
             // 
             // label4
@@ -269,7 +280,7 @@
             // tbReturn
             // 
             this.tbReturn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbReturn.Location = new System.Drawing.Point(12, 287);
+            this.tbReturn.Location = new System.Drawing.Point(12, 345);
             this.tbReturn.Multiline = true;
             this.tbReturn.Name = "tbReturn";
             this.tbReturn.ReadOnly = true;
@@ -285,7 +296,7 @@
             this.btFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFechar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btFechar.Location = new System.Drawing.Point(228, 488);
+            this.btFechar.Location = new System.Drawing.Point(228, 546);
             this.btFechar.Name = "btFechar";
             this.btFechar.Size = new System.Drawing.Size(135, 23);
             this.btFechar.TabIndex = 11;
@@ -301,7 +312,7 @@
             this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCopy.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btCopy.Location = new System.Drawing.Point(12, 488);
+            this.btCopy.Location = new System.Drawing.Point(12, 546);
             this.btCopy.Name = "btCopy";
             this.btCopy.Size = new System.Drawing.Size(210, 23);
             this.btCopy.TabIndex = 12;
@@ -314,7 +325,7 @@
             this.statusBar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusBar.Location = new System.Drawing.Point(0, 514);
+            this.statusBar.Location = new System.Drawing.Point(0, 572);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(375, 22);
             this.statusBar.TabIndex = 13;
@@ -348,7 +359,7 @@
             this.groupActions.Controls.Add(this.btCancelReg);
             this.groupActions.Controls.Add(this.btUserExists);
             this.groupActions.Enabled = false;
-            this.groupActions.Location = new System.Drawing.Point(12, 222);
+            this.groupActions.Location = new System.Drawing.Point(12, 301);
             this.groupActions.Name = "groupActions";
             this.groupActions.Size = new System.Drawing.Size(351, 38);
             this.groupActions.TabIndex = 18;
@@ -378,7 +389,7 @@
             this.btHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btHide.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btHide.Location = new System.Drawing.Point(12, 205);
+            this.btHide.Location = new System.Drawing.Point(12, 284);
             this.btHide.Name = "btHide";
             this.btHide.Size = new System.Drawing.Size(153, 21);
             this.btHide.TabIndex = 20;
@@ -386,12 +397,77 @@
             this.btHide.UseVisualStyleBackColor = false;
             this.btHide.Click += new System.EventHandler(this.btHide_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(6, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "CPF";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "OBS.";
+            // 
+            // mtbCPF
+            // 
+            this.mtbCPF.Enabled = false;
+            this.mtbCPF.Location = new System.Drawing.Point(68, 128);
+            this.mtbCPF.Mask = "000.000.000-00";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(110, 20);
+            this.mtbCPF.TabIndex = 21;
+            this.mtbCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbObservacoes
+            // 
+            this.tbObservacoes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tbObservacoes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbObservacoes.Enabled = false;
+            this.tbObservacoes.Location = new System.Drawing.Point(68, 154);
+            this.tbObservacoes.Multiline = true;
+            this.tbObservacoes.Name = "tbObservacoes";
+            this.tbObservacoes.Size = new System.Drawing.Size(277, 62);
+            this.tbObservacoes.TabIndex = 22;
+            // 
+            // checkCPF
+            // 
+            this.checkCPF.AutoSize = true;
+            this.checkCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkCPF.Location = new System.Drawing.Point(50, 133);
+            this.checkCPF.Name = "checkCPF";
+            this.checkCPF.Size = new System.Drawing.Size(12, 11);
+            this.checkCPF.TabIndex = 23;
+            this.checkCPF.UseVisualStyleBackColor = true;
+            this.checkCPF.CheckedChanged += new System.EventHandler(this.checkCPF_CheckedChanged);
+            // 
+            // checkObservacao
+            // 
+            this.checkObservacao.AutoSize = true;
+            this.checkObservacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkObservacao.Location = new System.Drawing.Point(50, 159);
+            this.checkObservacao.Name = "checkObservacao";
+            this.checkObservacao.Size = new System.Drawing.Size(12, 11);
+            this.checkObservacao.TabIndex = 24;
+            this.checkObservacao.UseVisualStyleBackColor = true;
+            this.checkObservacao.CheckedChanged += new System.EventHandler(this.checkObservacao_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(375, 536);
+            this.ClientSize = new System.Drawing.Size(375, 594);
             this.Controls.Add(this.btHide);
             this.Controls.Add(this.groupActions);
             this.Controls.Add(this.statusBar);
@@ -447,6 +523,12 @@
         private System.Windows.Forms.GroupBox groupActions;
         private System.Windows.Forms.Button btCancelReg;
         private System.Windows.Forms.Button btHide;
+        private System.Windows.Forms.TextBox tbObservacoes;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkCPF;
+        private System.Windows.Forms.CheckBox checkObservacao;
     }
 }
 

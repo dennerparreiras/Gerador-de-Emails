@@ -21,6 +21,8 @@ namespace Gerador_de_Email
 
         static bool checkE = false;
         static bool checkA = false;
+        static bool checkC = false;
+        static bool checkO = false;
         static bool lastExists = false;
         static bool lastCancel = false;
         const string log = "data/log.denner";
@@ -70,6 +72,8 @@ namespace Gerador_de_Email
             tbNome.Text = "";
             tbEmail.Text = "";
             tbCargo.Text = "";
+            mtbCPF.Text = "";
+            tbObservacoes.Text = "";
             lastCancel = false;
             lastExists = false;
         }
@@ -88,8 +92,7 @@ namespace Gerador_de_Email
         {
             if (VerifyFields())
             {
-                //(string nome, string usuario, string dominio, string local, string cargo)
-                usuario = new User(FileManager.CapitalizarNome(tbNome.Text), tbEmail.Text, cbEmail.Text, cbLocal.Text, tbCargo.Text);
+                usuario = new User(FileManager.CapitalizarNome(tbNome.Text), tbEmail.Text, cbEmail.Text, cbLocal.Text, tbCargo.Text, mtbCPF.Text, tbObservacoes.Text);
                 PrintUserData();
             }
             ClearFields();
@@ -163,6 +166,34 @@ namespace Gerador_de_Email
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkCPF_CheckedChanged(object sender, EventArgs e)
+        {
+            checkC = checkCPF.Checked;
+
+            if (checkCPF.Checked)
+            {
+                mtbCPF.Enabled = ((checkC) ? true : false);
+            }
+            else
+            {
+                mtbCPF.Enabled = ((checkC) ? true : false);
+            }
+        }
+
+        private void checkObservacao_CheckedChanged(object sender, EventArgs e)
+        {
+            checkO = checkObservacao.Checked;
+
+            if (checkObservacao.Checked)
+            {
+                tbObservacoes.Enabled = ((checkO) ? true : false);
+            }
+            else
+            {
+                tbObservacoes.Enabled = ((checkO) ? true : false);
+            }
         }
     }
 }

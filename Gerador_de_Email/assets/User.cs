@@ -15,6 +15,8 @@ namespace Gerador_de_Email.assets
         private string _local;
         private string _cargo;
         private string _senha;
+        private string _cpf;
+        private string _observacao;
 
         public string Cargo { get { return _cargo; } set { _cargo = value; } }
         public string Local { get { return _local; } set { _local = value; } }
@@ -23,8 +25,10 @@ namespace Gerador_de_Email.assets
         public string DominioEmail { get { return _dominioEmail; } set { _dominioEmail = value; } }
         public string Nome { get { return _nome; } set { _nome = value; } }
         public string Senha { get { return _senha; } set { _senha = value; } }
+        public string CPF { get { return _cpf; } set { _cpf = value; } }
+        public string Observacao { get { return _observacao; } set { _observacao = value; } }
 
-        public User(string nome, string usuario, string dominio, string local, string cargo)
+        public User(string nome, string usuario, string dominio, string local, string cargo, string cpf, string observacao)
         {
             this._nome = nome;
             this._dominioEmail = dominio;
@@ -32,12 +36,14 @@ namespace Gerador_de_Email.assets
             this._cargo = cargo;
             this._senha = CreatePassword();
 
-            if(usuario == "")
+            if (usuario == "")
                 GeraUsuario();
-            else
+            else{
                 this._usuario = usuario;
-
+            }
             this._email = this._usuario + this._dominioEmail;
+            this._cpf = cpf;
+            this._observacao = observacao;
         }
 
         public string CreatePassword()
@@ -72,7 +78,10 @@ namespace Gerador_de_Email.assets
 
             if(_cargo != "")
                 sb.Append("Cargo: " + this._cargo + "\r\n");
-
+            if (_cpf != "   ,   ,   -")
+                sb.Append("CPF: " + this._cpf + "\r\n");
+            if (_observacao != "")
+                sb.Append("Observação: " + this._observacao + "\r\n");
             sb.Append("\r\n");
             return sb.ToString();
         }
