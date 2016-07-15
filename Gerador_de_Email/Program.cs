@@ -12,11 +12,16 @@ namespace Gerador_de_Email
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            bool admin = false;
+            if (args.Length > 0)
+                admin = (args[0] == "--admin") ? true : false;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            MainForm formularioPrincipal = new MainForm(admin);
+            Application.Run(formularioPrincipal);
         }
     }
 }

@@ -1,8 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
+using System.Windows.Forms;
 
 namespace Gerador_de_Email.assets
 {
@@ -11,7 +15,8 @@ namespace Gerador_de_Email.assets
         public static string[] Read(string path)
         {
             string[] lines = null;
-            try {
+            try
+            {
                 //byte[] bytes = null;
                 lines = System.IO.File.ReadAllLines(path);
                 //for (int i = 0; i < lines.Length; i++){
@@ -122,5 +127,73 @@ namespace Gerador_de_Email.assets
             }
         }
 
+        public static void WriteXML(string path, ref List<User> usuarios, bool reset)
+        {
+            string filePath = Path.GetFullPath(path);
+            try
+            {
+                if (!reset)
+                {
+                    if (File.Exists(filePath))
+                    {
+                        FileStream fsOpen = new FileStream(filePath, FileMode.Open);
+                        XmlSerializer xsOpen = new XmlSerializer(typeof(List<User>));
+                        List<User> usr = (List<User>)xsOpen.Deserialize(fsOpen);
+                        usr.AddRange(usuarios);
+                        fsOpen.Close();
+                        File.Delete(filePath);
+                        FileStream fsWrite = new FileStream(filePath, FileMode.CreateNew);
+                        XmlSerializer xs = new XmlSerializer(typeof(List<User>));
+                        xs.Serialize(fsWrite, usr);
+                        fsWrite.Close();
+                    }
+                    else
+                    {
+                        FileStream fsWrite = new FileStream(filePath, FileMode.CreateNew);
+                        XmlSerializer xs = new XmlSerializer(typeof(List<User>));
+                        xs.Serialize(fsWrite, usuarios);
+                        fsWrite.Close();
+                    }
+                }
+                else
+                {
+                    if (File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
+                    FileStream fsWrite = new FileStream(filePath, FileMode.CreateNew);
+                    XmlSerializer xs = new XmlSerializer(typeof(List<User>));
+                    xs.Serialize(fsWrite, usuarios);
+                    fsWrite.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+        }
+
+        public static void ReadXML(string path, ref List<User> usuarios)
+        {
+            string filePath = Path.GetFullPath(path);
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    FileStream fsOpen = new FileStream(filePath, FileMode.Open);
+                    XmlSerializer xsOpen = new XmlSerializer(typeof(List<User>));
+                    usuarios = (List<User>)xsOpen.Deserialize(fsOpen);
+                    fsOpen.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Não há arquivo para ser carregado!");
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+        }
     }
 }

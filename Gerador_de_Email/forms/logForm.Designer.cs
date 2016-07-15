@@ -35,6 +35,7 @@
             // 
             // tbRelaLog
             // 
+            this.tbRelaLog.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbRelaLog.Location = new System.Drawing.Point(1, -2);
             this.tbRelaLog.Multiline = true;
             this.tbRelaLog.Name = "tbRelaLog";
@@ -60,10 +61,11 @@
             this.ClientSize = new System.Drawing.Size(396, 574);
             this.Controls.Add(this.btFechaRelat);
             this.Controls.Add(this.tbRelaLog);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "logForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consuta de Log";
             this.ResumeLayout(false);
             this.PerformLayout();

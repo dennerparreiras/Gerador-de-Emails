@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerador_de_Email.assets;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gerador_de_Email.assets
 {
-    class User
+    /// <summary>
+    /// Classe/Objeto que representa um usuário do sistema e seus dados.
+    /// </summary>
+    [Serializable]
+    public class User
     {
         private string _nome;
         private string _usuario;
@@ -28,7 +33,19 @@ namespace Gerador_de_Email.assets
         public string CPF { get { return _cpf; } set { _cpf = value; } }
         public string Observacao { get { return _observacao; } set { _observacao = value; } }
 
-        public User(string nome, string usuario, string dominio, string local, string cargo, string cpf, string observacao)
+        /// <summary>
+        /// Construtor do objeto User (Usuário).
+        /// </summary>
+        /// <param name="nome"> Nome completo do usuário.</param>
+        /// <param name="cpf"> String com o CPF do usuário.</param>
+        /// <param name="local"> Local onde se encontra o usuário. Ex.: "Escritório Central"</param>
+        /// <param name="cargo"> Cargo do usuário. Ex.: "Auxiliar Administrativo"</param>
+        /// <param name="usuario"> Representação do usuário no Login. Ex.: "fulano.silva"</param>
+        /// <param name="dominio"> Domínio que será utilizado no email do usuário. Ex.: "@aterpa.com.br"</param>
+        /// <param name="senha"> Senha do usuário para acesso à rede e email.</param>
+        /// <param name="observacao"> Observações relacionadas ao usuário.</param>
+
+        public User(string nome, string cpf, string local, string cargo, string usuario, string dominio, string senha, string observacao)
         {
             this._nome = nome;
             this._dominioEmail = dominio;
@@ -36,9 +53,17 @@ namespace Gerador_de_Email.assets
             this._cargo = cargo;
             this._senha = CreatePassword();
 
+            if (senha == "")
+                CreatePassword();
+            else
+            {
+                this._senha = senha;
+            }
+
             if (usuario == "")
-                GeraUsuario();
-            else{
+                this._usuario = GeraUsuario(this._nome);
+            else
+            {
                 this._usuario = usuario;
             }
             this._email = this._usuario + this._dominioEmail;
@@ -46,7 +71,23 @@ namespace Gerador_de_Email.assets
             this._observacao = observacao;
         }
 
-        public string CreatePassword()
+        /// <summary>
+        /// Construtor do objeto User (Usuário) que não recebe parâmetros para criação.
+        /// </summary>
+        public User()
+        {
+            this._nome = " ";
+            this._dominioEmail = " ";
+            this._local = " ";
+            this._cargo = " ";
+            this._senha = " ";
+            this._usuario = " ";
+            this._email = " ";
+            this._cpf = " ";
+            this._observacao = " ";
+        }
+
+        private string CreatePassword()
         {
             int str = 2, num = 4;
             const string validTXT = "abcdefghijklmnopqrstuvwxyz";
@@ -76,7 +117,7 @@ namespace Gerador_de_Email.assets
             sb.Append("Email: " + this._email + "\r\n");
             sb.Append("Senha: " + this._senha + "\r\n");
 
-            if(_cargo != "")
+            if (_cargo != "")
                 sb.Append("Cargo: " + this._cargo + "\r\n");
             if (_cpf != "   ,   ,   -")
                 sb.Append("CPF: " + this._cpf + "\r\n");
@@ -86,16 +127,50 @@ namespace Gerador_de_Email.assets
             return sb.ToString();
         }
 
-        public void GeraUsuario()
+        private string GeraUsuario(string nome)
         {
-            string[] words = this._nome.Split(' ');
-            if (words.Length > 1)
-                this._usuario = (words[0] + "." + words[words.Length - 1]).ToLower();
+            string user = "";
+            string[] nameSplited = nome.Split(' ');
+            if (nameSplited.Length > 1)
+                user = (nameSplited[0] + "." + nameSplited[nameSplited.Length - 1]).ToLower();
             else
             {
-                this._usuario = words[0].ToLower();
+                user = nameSplited[0].ToLower();
                 System.Windows.Forms.MessageBox.Show("Usuário definido como apenas nome (sem sobrenome).");
             }
+            return GetStringNoAccentsOrSpace(user);
+        }
+
+        private string GetStringNoAccentsOrSpace(string str)
+        {
+            /** Troca os caracteres acentuados por não acentuados **/
+            string[] acentos = new string[] { "ç", "Ç", "á", "é", "í", "ó", "ú", "ý", "Á", "É", "Í", "Ó", "Ú", "Ý", "à", "è", "ì", "ò", "ù", "À", "È", "Ì", "Ò", "Ù", "ã", "õ", "ñ", "ä", "ë", "ï", "ö", "ü", "ÿ", "Ä", "Ë", "Ï", "Ö", "Ü", "Ã", "Õ", "Ñ", "â", "ê", "î", "ô", "û", "Â", "Ê", "Î", "Ô", "Û" };
+
+            string[] semAcento = new string[] { "c", "C", "a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y", "a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "a", "o", "n", "a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "A", "O", "N", "a", "e", "i", "o", "u", "A", "E", "I", "O", "U" };
+
+            for (int i = 0; i < acentos.Length; i++)
+            {
+                str = str.Replace(acentos[i], semAcento[i]);
+            }
+
+            /** Troca os caracteres especiais da string por "" **/
+            //Representação de ponto => "\\."
+            string[] caracteresEspeciais = { " ", ",", "-", ":", "\\(", "\\)", "ª", "\\|", "\\\\", "°" };
+
+            for (int i = 0; i < caracteresEspeciais.Length; i++)
+            {
+                str = str.Replace(caracteresEspeciais[i], "");
+            }
+
+            /** Troca os espaços no início por "" **/
+            str = str.Replace("^\\s+", "");
+
+            /** Troca os espaços no início por "" **/
+            str = str.Replace("\\s+$", "");
+
+            /** Troca os espaços duplicados, tabulações e etc por "" **/
+            str = str.Replace("\\s+", "");
+            return str;
         }
     }
 }
