@@ -14,11 +14,18 @@ namespace Gerador_de_Email.forms
     public partial class searchForm : Form
     {
         private static List<User> users = null;
+        private static DataGridViewColumn[] DGVC_comSenha = new DataGridViewColumn[7];
+        private static DataGridViewColumn[] DGVC_semSenha = new DataGridViewColumn[6];
+        private bool firstUse = true;
 
         public searchForm(ref List<User> usersList)
         {
             users = usersList;
             InitializeComponent();
+            this.Size = new Size(828, 188);
+            tabela_DGV.Visible = false;
+
+            tabela_DGV.Parent = pictureBox1;
 
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
@@ -34,11 +41,20 @@ namespace Gerador_de_Email.forms
             label6.BackColor = Color.Transparent;
             label7.Parent = pictureBox1;
             label7.BackColor = Color.Transparent;
-            tabela_DGV.Parent = pictureBox1;
+
+            checkExibirSenha.Parent = pictureBox1;
+            checkExibirSenha.BackColor = Color.Transparent;
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
+            if (firstUse)
+            {
+                firstUse = false;
+                this.Size = new Size(this.Size.Width, this.Size.Height + 173);
+                tabela_DGV.Visible = true;
+            }
+
             tabela_DGV.Rows.Clear();
             string cpf = (mtbCPF.Text == "   ,   ,   -") ? "" : mtbCPF.Text;
             List<User> lista = users.FindAll(
@@ -49,10 +65,22 @@ namespace Gerador_de_Email.forms
                 x.Cargo.Contains(tbCargo.Text) &&
                 x.Observacao.Contains(tbObservacoes.Text)
                 );
-
-            foreach (User u in lista)
+            tabela_DGV.Columns.Clear();
+            if (checkExibirSenha.Checked)
             {
-                tabela_DGV.Rows.Add(u.Nome, u.CPF, u.Usuario, u.Senha, u.Local, u.Cargo, u.Observacao);
+                tabela_DGV.Columns.AddRange(DGVC_comSenha);
+                foreach (User u in lista)
+                {
+                    tabela_DGV.Rows.Add(u.Nome, u.CPF, u.Usuario, u.Senha, u.Local, u.Cargo, u.Observacao);
+                }
+            }
+            else
+            {
+                tabela_DGV.Columns.AddRange(DGVC_semSenha);
+                foreach (User u in lista)
+                {
+                    tabela_DGV.Rows.Add(u.Nome, u.CPF, u.Usuario, u.Local, u.Cargo, u.Observacao);
+                }
             }
         }
 
@@ -77,6 +105,30 @@ namespace Gerador_de_Email.forms
                 tbCargo.Clear();
             if (!checkObservacoes.Checked)
                 tbObservacoes.Clear();
+        }
+
+        private void searchForm_Load(object sender, EventArgs e)
+        {
+            string[] headerComSenha = { "Nome", "CPF", "Usuario", "Senha", "Local", "Cargo", "Observacoes" };
+            string[] descricaoComSenha = { "Nome", "CPF", "Usuário", "Senha", "Local", "Cargo", "Observações" };
+            string[] headerSemSenha = { "Nome", "CPF", "Usuario", "Local", "Cargo", "Observacoes" }; ;
+            string[] descricaoSemSenha = { "Nome", "CPF", "Usuário", "Local", "Cargo", "Observações" };
+
+            for (int x = 0; x < headerComSenha.Length; x++)
+            {
+                DataGridViewColumn aux = new DataGridViewTextBoxColumn();
+                aux.Name = headerComSenha[x];
+                aux.HeaderText = descricaoComSenha[x];
+                DGVC_comSenha[x] = aux;
+            }
+
+            for (int y = 0; y < headerSemSenha.Length; y++)
+            {
+                DataGridViewColumn aux = new DataGridViewTextBoxColumn();
+                aux.Name = headerSemSenha[y];
+                aux.HeaderText = descricaoSemSenha[y];
+                DGVC_semSenha[y] = aux;
+            }
         }
     }
 }

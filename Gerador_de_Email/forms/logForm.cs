@@ -27,5 +27,10 @@ namespace Gerador_de_Email.forms
         {
             this.Dispose();
         }
+
+        private void btCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbRelaLog.Text);
+        }
     }
 }
