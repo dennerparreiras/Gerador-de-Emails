@@ -22,11 +22,10 @@ namespace Gerador_de_Email.forms
         {
             users = usersList;
             InitializeComponent();
-            this.Size = new Size(828, 188);
+            this.Size = new Size(828, 212);
             tabela_DGV.Visible = false;
 
             tabela_DGV.Parent = pictureBox1;
-
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
             label2.Parent = pictureBox1;
@@ -41,22 +40,27 @@ namespace Gerador_de_Email.forms
             label6.BackColor = Color.Transparent;
             label7.Parent = pictureBox1;
             label7.BackColor = Color.Transparent;
-
             checkExibirSenha.Parent = pictureBox1;
             checkExibirSenha.BackColor = Color.Transparent;
+
+            status.Text = "";
+            progress.Value = 0;
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
+            status.Text = "";
+            progress.Value = 0;
             if (firstUse)
             {
                 firstUse = false;
                 this.Size = new Size(this.Size.Width, this.Size.Height + 173);
                 tabela_DGV.Visible = true;
             }
-
+            progress.Value = 20;
             tabela_DGV.Rows.Clear();
             string cpf = (mtbCPF.Text == "   ,   ,   -") ? "" : mtbCPF.Text;
+            DateTime start = DateTime.Now;
             List<User> lista = users.FindAll(
                 x => x.Nome.Contains(tbNome.Text) &&
                 x.CPF.Contains(cpf) &&
@@ -65,6 +69,10 @@ namespace Gerador_de_Email.forms
                 x.Cargo.Contains(tbCargo.Text) &&
                 x.Observacao.Contains(tbObservacoes.Text)
                 );
+            progress.Value = 40;
+            TimeSpan timeSpent = DateTime.Now.Subtract(start);
+            status.Text = "Busca realizada em: " + timeSpent.ToString();
+
             tabela_DGV.Columns.Clear();
             if (checkExibirSenha.Checked)
             {
@@ -82,6 +90,7 @@ namespace Gerador_de_Email.forms
                     tabela_DGV.Rows.Add(u.Nome, u.CPF, u.Usuario, u.Local, u.Cargo, u.Observacao);
                 }
             }
+            progress.Value = 100;
         }
 
         private void Check_All(object sender, EventArgs e)

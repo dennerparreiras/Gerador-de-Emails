@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Cargo />
+    <Local>ATERPA - CIL</Local>
+    <Usuario>denner.parreiras</Usuario>
+    <Email>denner.parreiras@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Denner Parreiras</Nome>
+    <Senha>zr7452</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>ATERPA - CIL</Local>
+    <Usuario>gabriel.lucas</Usuario>
+    <Email>gabriel.lucas@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Gabriel Lucas</Nome>
+    <Senha>ou8312</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>ATERPA - CIL</Local>
+    <Usuario>diogo.silva</Usuario>
+    <Email>diogo.silva@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Diogo Silva</Nome>
+    <Senha>en6796</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>ATERPA - CIL</Local>
+    <Usuario>fulano.silva</Usuario>
+    <Email>fulano.silva@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Fulano da Silva</Nome>
+    <Senha>pz3241</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>fulanao.souza</Usuario>
+    <Email>fulanao.souza@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Fulanão de Souza</Nome>
+    <Senha>nw8669</Senha>
+    <CPF>123,456,789-00</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>leandro.ferreira</Usuario>
+    <Email>leandro.ferreira@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Leandro Ferreira</Nome>
+    <Senha>rw3935</Senha>
+    <CPF>001,234,567-89</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>leonardo.silva</Usuario>
+    <Email>leonardo.silva@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Leonardo da Silva</Nome>
+    <Senha>bl2808</Senha>
+    <CPF>789,654,123-00</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>ATERPA - Escritorio Central</Local>
+    <Usuario>joao.silva</Usuario>
+    <Email>joao.silva@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>João da Silva</Nome>
+    <Senha>ft8074</Senha>
+    <CPF>741,852,963-00</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Cargo />
+    <Local>ATERPA - Escritorio Central</Local>
+    <Usuario>joao.silva</Usuario>
+    <Email>joao.silva@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>João da Silva</Nome>
+    <Senha>mk3945</Senha>
+    <CPF>963,852,741-00</CPF>
+    <Observacao />
+  </User>
+</ArrayOfUser>

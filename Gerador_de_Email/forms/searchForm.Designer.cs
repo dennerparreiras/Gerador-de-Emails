@@ -53,13 +53,18 @@
             this.tabela_DGV = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkExibirSenha = new System.Windows.Forms.CheckBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.progress = new System.Windows.Forms.ToolStripProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela_DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.statusStrip1);
             this.panel1.Controls.Add(this.checkExibirSenha);
             this.panel1.Controls.Add(this.btSearch);
             this.panel1.Controls.Add(this.checkObservacoes);
@@ -356,7 +361,7 @@
             this.tabela_DGV.Location = new System.Drawing.Point(12, 149);
             this.tabela_DGV.Name = "tabela_DGV";
             this.tabela_DGV.ReadOnly = true;
-            this.tabela_DGV.Size = new System.Drawing.Size(788, 228);
+            this.tabela_DGV.Size = new System.Drawing.Size(788, 207);
             this.tabela_DGV.TabIndex = 1;
             // 
             // pictureBox1
@@ -385,6 +390,33 @@
             this.checkExibirSenha.CheckedChanged += new System.EventHandler(this.btSearch_Click);
             this.checkExibirSenha.Click += new System.EventHandler(this.btSearch_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.statusStrip1.BackgroundImage = global::Gerador_de_Email.Properties.Resources.big_bar2;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.progress,
+            this.status});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 365);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.statusStrip1.Size = new System.Drawing.Size(812, 24);
+            this.statusStrip1.TabIndex = 50;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // status
+            // 
+            this.status.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.status.ForeColor = System.Drawing.Color.White;
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(112, 19);
+            this.status.Text = "Buscar usuários";
+            // 
+            // progress
+            // 
+            this.progress.Name = "progress";
+            this.progress.Size = new System.Drawing.Size(100, 18);
+            // 
             // searchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,6 +433,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela_DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +465,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.CheckBox checkExibirSenha;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel status;
+        private System.Windows.Forms.ToolStripProgressBar progress;
     }
 }

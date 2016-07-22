@@ -60,31 +60,7 @@ namespace Gerador_de_Email.forms
             else
                 tbCount.Text = "0";
         }
-        /*
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            GraphicsPath little = new GraphicsPath();
-            GraphicsPath big = new GraphicsPath();
 
-            little.AddEllipse(0, 0, 50, 18);
-
-            big.AddEllipse(0, 0, btCopyAll.Width, btCopyAll.Height);
-
-            btOnly1Name.Region = new Region(little);
-            btOnly2Name.Region = new Region(little);
-            btCopyNome.Region = new Region(little);
-            btCopyUsuario.Region = new Region(little);
-            btCopyEmail.Region = new Region(little);
-            btCopyCPF.Region = new Region(little);
-            btCopySenha.Region = new Region(little);
-            btCopyLocal.Region = new Region(little);
-            btCopyCargo.Region = new Region(little);
-            btCopyObs.Region = new Region(little);
-
-            btCopyAll.Region = new Region(big);
-            btDelete.Region = new Region(big);
-        }
-        */
         private void btNext_Click(object sender, EventArgs e)
         {
             if (count + 1 <= users.Count - 1)
