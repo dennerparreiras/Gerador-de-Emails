@@ -33,6 +33,7 @@ namespace Gerador_de_Email
         const string dom = @"data/dominios.denner";
         const string loc = @"data/local.denner";
         const string lXML = @"data/lista.xml";
+        const string ico = @"data/app.ico";
 
         /// <summary>
         /// Construtor do formulário principal.
@@ -79,6 +80,21 @@ namespace Gerador_de_Email
             label7.BackColor = Color.Transparent;
             label8.Parent = pictureBox1;
             label8.BackColor = Color.Transparent;
+
+            if (File.Exists(ico))
+            {
+                // You should replace the bold icon in the sample below
+                // with an icon of your own choosing.
+                // Note the escape character used (@) when specifying the path.
+                notifyIcon1.Icon =
+                   new System.Drawing.Icon(ico);
+                notifyIcon1.Visible = true;
+                notifyIcon1.Text = this.Text;
+
+                notifyIcon1.BalloonTipTitle = this.Text;
+                notifyIcon1.BalloonTipText = "O programa está em execução...";
+                notifyIcon1.ShowBalloonTip(500);
+            }
         }
 
         /// <summary>
@@ -125,6 +141,8 @@ namespace Gerador_de_Email
                 usuarios.Add(auxUser);
                 tbReturn.Text += PrintUserData(auxUser);
             }
+            notifyIcon1.BalloonTipText = "Usuário criado!";
+            notifyIcon1.ShowBalloonTip(250);
             ClearFields();
         }
 
