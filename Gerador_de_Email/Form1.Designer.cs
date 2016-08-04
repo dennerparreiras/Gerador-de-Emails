@@ -52,10 +52,7 @@
             this.tbReturn = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btCopy = new System.Windows.Forms.Button();
-            this.btGenerate = new System.Windows.Forms.Button();
-            this.btClean = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,10 +65,13 @@
             this.parâmetrosDoSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.About_TSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btCopy = new System.Windows.Forms.Button();
+            this.btGenerate = new System.Windows.Forms.Button();
+            this.btClean = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -335,66 +335,11 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "Dados do Usuário";
             // 
-            // btCopy
+            // notifyIcon1
             // 
-            this.btCopy.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCopy.BackgroundImage")));
-            this.btCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCopy.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btCopy.Location = new System.Drawing.Point(387, 266);
-            this.btCopy.Name = "btCopy";
-            this.btCopy.Size = new System.Drawing.Size(226, 23);
-            this.btCopy.TabIndex = 12;
-            this.btCopy.Text = "Copiar para área de transferência";
-            this.btCopy.UseVisualStyleBackColor = false;
-            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
-            // 
-            // btGenerate
-            // 
-            this.btGenerate.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btGenerate.BackgroundImage")));
-            this.btGenerate.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
-            this.btGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGenerate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btGenerate.Location = new System.Drawing.Point(176, 266);
-            this.btGenerate.Name = "btGenerate";
-            this.btGenerate.Size = new System.Drawing.Size(185, 23);
-            this.btGenerate.TabIndex = 14;
-            this.btGenerate.Text = "Gerar Dados";
-            this.btGenerate.UseVisualStyleBackColor = false;
-            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
-            // 
-            // btClean
-            // 
-            this.btClean.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btClean.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClean.BackgroundImage")));
-            this.btClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClean.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btClean.Location = new System.Drawing.Point(84, 266);
-            this.btClean.Name = "btClean";
-            this.btClean.Size = new System.Drawing.Size(86, 23);
-            this.btClean.TabIndex = 16;
-            this.btClean.Text = "Limpar";
-            this.btClean.UseVisualStyleBackColor = false;
-            this.btClean.Click += new System.EventHandler(this.btClean_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(657, 332);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // MenuBar
             // 
@@ -505,6 +450,7 @@
             this.parâmetrosDoSistemaToolStripMenuItem.Name = "parâmetrosDoSistemaToolStripMenuItem";
             this.parâmetrosDoSistemaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.parâmetrosDoSistemaToolStripMenuItem.Text = "Parâmetros do Sistema";
+            this.parâmetrosDoSistemaToolStripMenuItem.Click += new System.EventHandler(this.parâmetrosDoSistemaToolStripMenuItem_Click);
             // 
             // opçõesToolStripMenuItem
             // 
@@ -522,10 +468,66 @@
             this.About_TSMI.Text = "Sobre";
             this.About_TSMI.Click += new System.EventHandler(this.About_TSMI_Click);
             // 
-            // notifyIcon1
+            // btCopy
             // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.btCopy.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCopy.BackgroundImage")));
+            this.btCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopy.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btCopy.Location = new System.Drawing.Point(387, 266);
+            this.btCopy.Name = "btCopy";
+            this.btCopy.Size = new System.Drawing.Size(226, 23);
+            this.btCopy.TabIndex = 12;
+            this.btCopy.Text = "Copiar para área de transferência";
+            this.btCopy.UseVisualStyleBackColor = false;
+            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
+            // 
+            // btGenerate
+            // 
+            this.btGenerate.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btGenerate.BackgroundImage")));
+            this.btGenerate.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
+            this.btGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGenerate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btGenerate.Location = new System.Drawing.Point(176, 266);
+            this.btGenerate.Name = "btGenerate";
+            this.btGenerate.Size = new System.Drawing.Size(185, 23);
+            this.btGenerate.TabIndex = 14;
+            this.btGenerate.Text = "Gerar Dados";
+            this.btGenerate.UseVisualStyleBackColor = false;
+            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
+            // 
+            // btClean
+            // 
+            this.btClean.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btClean.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClean.BackgroundImage")));
+            this.btClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClean.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btClean.Location = new System.Drawing.Point(84, 266);
+            this.btClean.Name = "btClean";
+            this.btClean.Size = new System.Drawing.Size(86, 23);
+            this.btClean.TabIndex = 16;
+            this.btClean.Text = "Limpar";
+            this.btClean.UseVisualStyleBackColor = false;
+            this.btClean.Click += new System.EventHandler(this.btClean_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(657, 332);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -544,11 +546,12 @@
             this.Text = "FLUXUS - Gerador de Usuários";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

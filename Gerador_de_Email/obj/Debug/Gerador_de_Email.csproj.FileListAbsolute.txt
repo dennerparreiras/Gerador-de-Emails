@@ -44,3 +44,8 @@ E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.Properties.Resources.resources
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csproj.GenerateResource.Cache
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.TrustInfo.xml
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe.manifest
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.application
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.exe.manifest
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.application
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.ParametersForm.resources

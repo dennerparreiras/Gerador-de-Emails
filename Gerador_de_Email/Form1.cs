@@ -20,6 +20,7 @@ namespace Gerador_de_Email
         static bool adminStatus = false;
 
         static List<User> usuarios = new List<User>();
+        static Parameters config = new Parameters();
 
         static string[] dataSourceDom;
         static string[] dataSourceLoc;
@@ -29,23 +30,22 @@ namespace Gerador_de_Email
         static bool checkO = false;
         static bool checkS = false;
 
-        const string log = @"data/log.denner";
-        const string dom = @"data/dominios.denner";
-        const string loc = @"data/local.denner";
-        const string lXML = @"data/lista.xml";
-        const string ico = @"data/app.ico";
 
         /// <summary>
         /// Construtor do formulário principal.
         /// </summary>
         public MainForm(bool admin)
         {
+            /////////////////////////////////////////
+            admin = true;
+            /////////////////////////////////////////
+
             adminStatus = admin;
             if (adminStatus)
             {
-                MessageBox.Show("Logado como administrador.");
+                MessageBox.Show("Modo Administrador ativado.");
             }
-            
+
             InitializeComponent();
 
             if (!adminStatus)
@@ -54,12 +54,30 @@ namespace Gerador_de_Email
                 administrador_TSMI.Visible = false;
             }
 
-            dataSourceDom = FileManager.Read(dom);
-            dataSourceLoc = FileManager.Read(loc);
+            if (File.Exists(@"data/config.data"))
+            {
+                config = new CustomBinarySerializer<Parameters>().DeserializeFromBinaryFile(@"data/config.data");
+            }
+            else
+            {
+                new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
+            }
+
+            dataSourceDom = FileManager.Read(config.listDomain);
+            dataSourceLoc = FileManager.Read(config.listPlace);
 
             // Sort the array
-            FileManager.Quicksort(dataSourceDom, 0, dataSourceDom.Length - 1);
-            FileManager.Quicksort(dataSourceLoc, 0, dataSourceLoc.Length - 1);
+            try
+            {
+                if (dataSourceDom != null)
+                    FileManager.Quicksort(dataSourceDom, 0, dataSourceDom.Length - 1);
+                if (dataSourceLoc != null)
+                    FileManager.Quicksort(dataSourceLoc, 0, dataSourceLoc.Length - 1);
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Falha de Ordenação");
+            }
 
             cbEmail.DataSource = dataSourceDom;
             cbLocal.DataSource = dataSourceLoc;
@@ -81,13 +99,12 @@ namespace Gerador_de_Email
             label8.Parent = pictureBox1;
             label8.BackColor = Color.Transparent;
 
-            if (File.Exists(ico))
+            if (File.Exists(config.icon))
             {
                 // You should replace the bold icon in the sample below
                 // with an icon of your own choosing.
                 // Note the escape character used (@) when specifying the path.
-                notifyIcon1.Icon =
-                   new System.Drawing.Icon(ico);
+                notifyIcon1.Icon = new System.Drawing.Icon(config.icon);
                 notifyIcon1.Visible = true;
                 notifyIcon1.Text = this.Text;
 
@@ -95,6 +112,12 @@ namespace Gerador_de_Email
                 notifyIcon1.BalloonTipText = "O programa está em execução...";
                 notifyIcon1.ShowBalloonTip(500);
             }
+
+            if (File.Exists(config.XMLFile))
+            {
+                FileManager.ReadXML(config.XMLFile, ref usuarios);
+            }
+
         }
 
         /// <summary>
@@ -102,7 +125,7 @@ namespace Gerador_de_Email
         /// </summary>
         public string PrintUserData(User usuario)
         {
-            FileManager.Write(usuario.ToString(), log, true);
+            FileManager.Write(usuario.ToString(), config.LogFile, true);
             return usuario.ToString();
         }
 
@@ -191,22 +214,20 @@ namespace Gerador_de_Email
 
         private void salvarTSMI_Click(object sender, EventArgs e)
         {
-            FileManager.WriteXML(lXML, ref usuarios, true);
+            FileManager.WriteXML(config.XMLFile, ref usuarios, true);
+            new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (File.Exists(lXML))
-            {
-                FileManager.ReadXML(lXML, ref usuarios);
-            }
+            
         }
 
         private void carregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (File.Exists(lXML))
+            if (File.Exists(config.XMLFile))
             {
-                FileManager.ReadXML(lXML, ref usuarios);
+                FileManager.ReadXML(config.XMLFile, ref usuarios);
             }
         }
 
@@ -240,7 +261,8 @@ namespace Gerador_de_Email
                     string msg = "";
                     try
                     {
-                        FileManager.WriteXML(lXML, ref usuarios, true);
+                        FileManager.WriteXML(config.XMLFile, ref usuarios, true);
+                        new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
                         msg = "Dados salvos com sucesso!";
                     }
                     catch (Exception erro)
@@ -259,6 +281,34 @@ namespace Gerador_de_Email
         private void administrador_TSMI_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            /*
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Visible = false;
+                this.ShowInTaskbar = false;
+                this.WindowState = FormWindowState.Minimized;
+                notifyIcon1.Visible = true;
+            }
+            */
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            /*
+            this.Visible = true;
+            this.WindowState = FormWindowState.Normal;
+            this.ShowInTaskbar = true;
+            notifyIcon1.Visible = false;
+            */
+        }
+
+        private void parâmetrosDoSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ParametersForm(ref config).ShowDialog();
         }
     }
 }
