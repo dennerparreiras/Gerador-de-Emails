@@ -33,6 +33,20 @@ namespace Gerador_de_Email.forms
             tbIcone.Text = Config.icon;
             checkMinim.Checked = Config.startMinimized;
             checkAdm.Checked = Config.startAdmMode;
+
+            tbCharEspecial.Text = Config.passwordConfig.charString;
+            numLetras.Value = Config.passwordConfig.letters;
+            numNumeros.Value = Config.passwordConfig.numbers;
+            numCharEspeciais.Value = Config.passwordConfig.espChars;
+            rbRandom.Checked = Config.passwordConfig.randomChars;
+
+            this.Visible = false;
+        }
+
+        private void ParametersForm_Load(object sender, EventArgs e)
+        {
+            System.Threading.Thread.Sleep(500);
+            this.Visible = true;
         }
 
         private void Verify(string ShortFilePath)
@@ -53,18 +67,44 @@ namespace Gerador_de_Email.forms
 
         private void Salvar(object sender, EventArgs e)
         {
-            Config.listDomain = tbDominio.Text;
-            Config.listPlace = tbLocal.Text;
-            Config.XMLFile = tbUsuario.Text;
-            Config.LogFile = tbLog.Text;
-            Config.icon = tbIcone.Text;
-            Config.startMinimized = checkMinim.Checked;
-            Config.startAdmMode = checkAdm.Checked;
+            DialogResult dialogResult = MessageBox.Show("Deseja salvar os dados e sair?", "Salvar e sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    Config.listDomain = tbDominio.Text;
+                    Config.listPlace = tbLocal.Text;
+                    Config.XMLFile = tbUsuario.Text;
+                    Config.LogFile = tbLog.Text;
+                    Config.icon = tbIcone.Text;
+                    Config.startMinimized = checkMinim.Checked;
+                    Config.startAdmMode = checkAdm.Checked;
+
+                    Config.passwordConfig.charString = tbCharEspecial.Text;
+                    Config.passwordConfig.letters = numLetras.Value;
+                    Config.passwordConfig.numbers = numNumeros.Value;
+                    Config.passwordConfig.espChars = numCharEspeciais.Value;
+                    Config.passwordConfig.randomChars = rbRandom.Checked;
+
+                    new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(Config, @"data/config.data");
+
+                    this.Dispose();
+                }
+                catch
+                {
+                    MessageBox.Show("Houve uma falha ao tentar salvar!");
+                    this.Dispose();
+                }
+            }
         }
 
         private void Cancelar(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult dialogResult = MessageBox.Show("Deseja sair sem salvar os dados", "Sair sem salvar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
         }
 
         private void VerificarDominio(object sender, EventArgs e)
@@ -124,6 +164,17 @@ namespace Gerador_de_Email.forms
         private void DefaultIcone(object sender, EventArgs e)
         {
             tbIcone.Text = @"data/app.ico";
+        }
+
+        private void ResetPassConfig(object sender, EventArgs e)
+        {
+            PassConfig aux = new PassConfig();
+            tbCharEspecial.Text = aux.charString;
+            numLetras.Value = aux.letters;
+            numNumeros.Value = aux.numbers;
+            numCharEspeciais.Value = aux.espChars;
+            rbRandom.Checked = aux.randomChars;
+            rbOrdered.Checked = !aux.randomChars;
         }
     }
 }

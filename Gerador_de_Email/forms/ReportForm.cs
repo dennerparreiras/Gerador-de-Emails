@@ -106,7 +106,10 @@ namespace Gerador_de_Email.forms
         private void tbOnly2Name_Click(object sender, EventArgs e)
         {
             string[] array = tbNome.Text.Split(' ');
-            Clipboard.SetText(tbNome.Text.Substring(array[0].Length + 1));
+            if (array.Length > 1)
+                Clipboard.SetText(tbNome.Text.Substring(array[0].Length + 1));
+            else
+                MessageBox.Show("Não há sobrenomes registrados para este usuário.");
         }
 
         private void btCopyNome_Click(object sender, EventArgs e)
@@ -338,53 +341,56 @@ namespace Gerador_de_Email.forms
         private void btDelete_Click(object sender, EventArgs e)
         {
             User usr = users[count];
-            bool userDeleted = false;
-            try
+
+            DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja excluir o usuário " + usr.Nome + " ?", "Ecluir usuário?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                if (users.Count > 0)
+                bool userDeleted = false;
+                try
                 {
-                    if (count == 1 && users.Count == 1)
+                    if (users.Count > 0)
                     {
-                        users.RemoveAt(0);
-                        userDeleted = true;
+                        if (count == 1 && users.Count == 1)
+                        {
+                            users.RemoveAt(0);
+                            userDeleted = true;
+                            count = 0;
+                            FillFields(new User());
+                        }
+                        else if (count < users.Count)
+                        {
+                            users.RemoveAt(count);
+                            userDeleted = true;
+                            if (count == 0)
+                            {
+                                FillFields(new User());
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                count--;
+                                FillFields(users[count]);
+                            }
+                        }
+                    }
+                    else
+                    {
                         count = 0;
                         FillFields(new User());
-                    }
-                    else if (count < users.Count)
-                    {
-                        users.RemoveAt(count);
-                        userDeleted = true;
-                        count--;
-                        FillFields(users[count]);
-
-                    }
-                    else if (count == users.Count)
-                    {
-                        users.RemoveAt(count - 1);
-                        userDeleted = true;
-                        count--;
-                        if (count == 0)
-                            FillFields(new User());
-                        else
-                            FillFields(users[count]);
+                        this.Dispose();
                     }
                 }
-                else
+                catch (Exception err)
                 {
-                    count = 0;
-                    FillFields(new User());
+                    MessageBox.Show(err.Message);
                 }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            finally
-            {
-                if (userDeleted)
-                    MessageBox.Show("Usuário " + usr.Usuario + " apagado com sucesso!");
-                else
-                    MessageBox.Show("Não foi possível apagar o usuário " + usr.Usuario + "!");
+                finally
+                {
+                    if (userDeleted)
+                        MessageBox.Show("Usuário " + usr.Usuario + " apagado com sucesso!");
+                    else
+                        MessageBox.Show("Não foi possível apagar o usuário " + usr.Usuario + "!");
+                }
             }
         }
 

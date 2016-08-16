@@ -32,30 +32,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbDominio = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbLocal = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkMinim = new System.Windows.Forms.CheckBox();
-            this.checkAdm = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btSalvar = new System.Windows.Forms.Button();
-            this.btCancelar = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbLog = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbIcone = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbLog = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbLocal = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkAdm = new System.Windows.Forms.CheckBox();
+            this.checkMinim = new System.Windows.Forms.CheckBox();
+            this.btSalvar = new System.Windows.Forms.Button();
+            this.btCancelar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbRandom = new System.Windows.Forms.RadioButton();
             this.rbOrdered = new System.Windows.Forms.RadioButton();
@@ -68,6 +68,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.numNumeros = new System.Windows.Forms.NumericUpDown();
             this.numLetras = new System.Windows.Forms.NumericUpDown();
+            this.btDefaultPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -125,245 +126,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Locais dos arquivos do sistema";
             // 
-            // button1
+            // button7
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(437, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Verificar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.VerificarDominio);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(437, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Verificar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.VerificarLocais);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Lista de locais";
-            // 
-            // tbLocal
-            // 
-            this.tbLocal.Location = new System.Drawing.Point(133, 54);
-            this.tbLocal.Name = "tbLocal";
-            this.tbLocal.Size = new System.Drawing.Size(298, 20);
-            this.tbLocal.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(437, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Verificar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.VerificarUsuarios);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Arquivo de usuários";
-            // 
-            // tbUsuario
-            // 
-            this.tbUsuario.Location = new System.Drawing.Point(133, 80);
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(298, 20);
-            this.tbUsuario.TabIndex = 7;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Navy;
-            this.groupBox2.Controls.Add(this.checkAdm);
-            this.groupBox2.Controls.Add(this.checkMinim);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 270);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(323, 119);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Outras opções";
-            // 
-            // checkMinim
-            // 
-            this.checkMinim.AutoSize = true;
-            this.checkMinim.Location = new System.Drawing.Point(24, 24);
-            this.checkMinim.Name = "checkMinim";
-            this.checkMinim.Size = new System.Drawing.Size(180, 17);
-            this.checkMinim.TabIndex = 0;
-            this.checkMinim.Text = "Minimizar sempre para a bandeja";
-            this.checkMinim.UseVisualStyleBackColor = true;
-            // 
-            // checkAdm
-            // 
-            this.checkAdm.AutoSize = true;
-            this.checkAdm.Location = new System.Drawing.Point(24, 47);
-            this.checkAdm.Name = "checkAdm";
-            this.checkAdm.Size = new System.Drawing.Size(212, 17);
-            this.checkAdm.TabIndex = 1;
-            this.checkAdm.Text = "Iniciar sempre no \"Modo Administrador\"";
-            this.checkAdm.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(518, 26);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Default";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.DefaultDominio);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(518, 52);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Default";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.DefaultLocal);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(518, 78);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Default";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.DefaultUsuarios);
-            // 
-            // btSalvar
-            // 
-            this.btSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSalvar.BackgroundImage")));
-            this.btSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Location = new System.Drawing.Point(462, 366);
-            this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(155, 23);
-            this.btSalvar.TabIndex = 12;
-            this.btSalvar.Text = "Salvar alterações";
-            this.btSalvar.UseVisualStyleBackColor = false;
-            this.btSalvar.Click += new System.EventHandler(this.Salvar);
-            // 
-            // btCancelar
-            // 
-            this.btCancelar.BackgroundImage = global::Gerador_de_Email.Properties.Resources.red_silk;
-            this.btCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancelar.ForeColor = System.Drawing.Color.White;
-            this.btCancelar.Location = new System.Drawing.Point(341, 366);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(115, 23);
-            this.btCancelar.TabIndex = 13;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = true;
-            this.btCancelar.Click += new System.EventHandler(this.Cancelar);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(518, 104);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Default";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.DefaultLog);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(437, 104);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "Verificar";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.VerificarLog);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Arquivo de Log";
-            // 
-            // tbLog
-            // 
-            this.tbLog.Location = new System.Drawing.Point(133, 106);
-            this.tbLog.Name = "tbLog";
-            this.tbLog.Size = new System.Drawing.Size(298, 20);
-            this.tbLog.TabIndex = 13;
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(437, 159);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(156, 23);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "Default";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.AllDefault);
             // 
             // button11
             // 
@@ -413,21 +190,245 @@
             this.tbIcone.Size = new System.Drawing.Size(298, 20);
             this.tbIcone.TabIndex = 17;
             // 
-            // button7
+            // button9
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(437, 159);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 23);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Default";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.AllDefault);
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(518, 104);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Default";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.DefaultLog);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(437, 104);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "Verificar";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.VerificarLog);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Arquivo de Log";
+            // 
+            // tbLog
+            // 
+            this.tbLog.Location = new System.Drawing.Point(133, 106);
+            this.tbLog.Name = "tbLog";
+            this.tbLog.Size = new System.Drawing.Size(298, 20);
+            this.tbLog.TabIndex = 13;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(518, 78);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Default";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.DefaultUsuarios);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(518, 52);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Default";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.DefaultLocal);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(518, 26);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Default";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.DefaultDominio);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(437, 78);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Verificar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.VerificarUsuarios);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Arquivo de usuários";
+            // 
+            // tbUsuario
+            // 
+            this.tbUsuario.Location = new System.Drawing.Point(133, 80);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(298, 20);
+            this.tbUsuario.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(437, 52);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Verificar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.VerificarLocais);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Lista de locais";
+            // 
+            // tbLocal
+            // 
+            this.tbLocal.Location = new System.Drawing.Point(133, 54);
+            this.tbLocal.Name = "tbLocal";
+            this.tbLocal.Size = new System.Drawing.Size(298, 20);
+            this.tbLocal.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(437, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Verificar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.VerificarDominio);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Navy;
+            this.groupBox2.Controls.Add(this.checkAdm);
+            this.groupBox2.Controls.Add(this.checkMinim);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(12, 270);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(323, 119);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Outras opções";
+            // 
+            // checkAdm
+            // 
+            this.checkAdm.AutoSize = true;
+            this.checkAdm.Location = new System.Drawing.Point(24, 47);
+            this.checkAdm.Name = "checkAdm";
+            this.checkAdm.Size = new System.Drawing.Size(212, 17);
+            this.checkAdm.TabIndex = 1;
+            this.checkAdm.Text = "Iniciar sempre no \"Modo Administrador\"";
+            this.checkAdm.UseVisualStyleBackColor = true;
+            // 
+            // checkMinim
+            // 
+            this.checkMinim.AutoSize = true;
+            this.checkMinim.Location = new System.Drawing.Point(24, 24);
+            this.checkMinim.Name = "checkMinim";
+            this.checkMinim.Size = new System.Drawing.Size(180, 17);
+            this.checkMinim.TabIndex = 0;
+            this.checkMinim.Text = "Minimizar sempre para a bandeja";
+            this.checkMinim.UseVisualStyleBackColor = true;
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSalvar.BackgroundImage")));
+            this.btSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalvar.ForeColor = System.Drawing.Color.White;
+            this.btSalvar.Location = new System.Drawing.Point(462, 366);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(155, 23);
+            this.btSalvar.TabIndex = 12;
+            this.btSalvar.Text = "Salvar alterações";
+            this.btSalvar.UseVisualStyleBackColor = false;
+            this.btSalvar.Click += new System.EventHandler(this.Salvar);
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.BackgroundImage = global::Gerador_de_Email.Properties.Resources.red_silk;
+            this.btCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancelar.ForeColor = System.Drawing.Color.White;
+            this.btCancelar.Location = new System.Drawing.Point(341, 366);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(115, 23);
+            this.btCancelar.TabIndex = 13;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.Cancelar);
             // 
             // groupBox3
             // 
@@ -469,6 +470,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Navy;
+            this.groupBox4.Controls.Add(this.btDefaultPass);
             this.groupBox4.Controls.Add(this.tbCharEspecial);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label7);
@@ -489,7 +491,7 @@
             // 
             this.tbCharEspecial.Location = new System.Drawing.Point(9, 115);
             this.tbCharEspecial.Name = "tbCharEspecial";
-            this.tbCharEspecial.Size = new System.Drawing.Size(231, 20);
+            this.tbCharEspecial.Size = new System.Drawing.Size(180, 20);
             this.tbCharEspecial.TabIndex = 8;
             // 
             // label6
@@ -573,6 +575,22 @@
             0,
             0});
             // 
+            // btDefaultPass
+            // 
+            this.btDefaultPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btDefaultPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDefaultPass.BackgroundImage")));
+            this.btDefaultPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btDefaultPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDefaultPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDefaultPass.ForeColor = System.Drawing.Color.White;
+            this.btDefaultPass.Location = new System.Drawing.Point(195, 99);
+            this.btDefaultPass.Name = "btDefaultPass";
+            this.btDefaultPass.Size = new System.Drawing.Size(75, 36);
+            this.btDefaultPass.TabIndex = 20;
+            this.btDefaultPass.Text = "Default";
+            this.btDefaultPass.UseVisualStyleBackColor = false;
+            this.btDefaultPass.Click += new System.EventHandler(this.ResetPassConfig);
+            // 
             // ParametersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,6 +607,7 @@
             this.Name = "ParametersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Parâmetros do Sistema - FLUXUS";
+            this.Load += new System.EventHandler(this.ParametersForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -645,5 +664,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown numNumeros;
         private System.Windows.Forms.NumericUpDown numLetras;
+        private System.Windows.Forms.Button btDefaultPass;
     }
 }

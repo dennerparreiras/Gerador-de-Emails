@@ -17,6 +17,8 @@ namespace Gerador_de_Email.assets
         public bool startMinimized { get; set; }
         public bool startAdmMode { get; set; }
 
+        public PassConfig passwordConfig { get; set; }
+
         public Parameters()
         {
             this.listDomain = @"data/dominios.denner";
@@ -26,6 +28,7 @@ namespace Gerador_de_Email.assets
             this.icon = @"data/app.ico";
             this.startMinimized = false;
             this.startAdmMode = false;
+            this.passwordConfig = new PassConfig();
         }
     }
 }

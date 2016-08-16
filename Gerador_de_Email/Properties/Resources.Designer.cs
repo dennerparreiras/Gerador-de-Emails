@@ -183,6 +183,26 @@ namespace Gerador_de_Email.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_silk_background {
+            get {
+                object obj = ResourceManager.GetObject("red_silk_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_silk_bar {
+            get {
+                object obj = ResourceManager.GetObject("red_silk_bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_wall {
             get {
                 object obj = ResourceManager.GetObject("red_wall", resourceCulture);

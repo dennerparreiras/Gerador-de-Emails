@@ -69,6 +69,9 @@
             this.btGenerate = new System.Windows.Forms.Button();
             this.btClean = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btConsole = new System.Windows.Forms.Button();
+            this.btConsoleGo = new System.Windows.Forms.Button();
+            this.tbConsole = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -252,9 +255,9 @@
             // tbNome
             // 
             this.tbNome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbNome.Location = new System.Drawing.Point(84, 63);
+            this.tbNome.Location = new System.Drawing.Point(82, 63);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(277, 20);
+            this.tbNome.Size = new System.Drawing.Size(278, 20);
             this.tbNome.TabIndex = 8;
             // 
             // tbEmail
@@ -292,6 +295,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btConsoleGo);
+            this.panel1.Controls.Add(this.btConsole);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btCopy);
             this.panel1.Controls.Add(this.tbSenha);
@@ -305,6 +310,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.checkObservacao);
             this.panel1.Controls.Add(this.btGenerate);
+            this.panel1.Controls.Add(this.tbConsole);
             this.panel1.Controls.Add(this.tbNome);
             this.panel1.Controls.Add(this.cbLocal);
             this.panel1.Controls.Add(this.checkCPF);
@@ -529,6 +535,48 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btConsole
+            // 
+            this.btConsole.BackColor = System.Drawing.Color.SlateGray;
+            this.btConsole.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btConsole.FlatAppearance.BorderSize = 0;
+            this.btConsole.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsole.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConsole.Location = new System.Drawing.Point(4, 311);
+            this.btConsole.Name = "btConsole";
+            this.btConsole.Size = new System.Drawing.Size(15, 15);
+            this.btConsole.TabIndex = 30;
+            this.btConsole.UseVisualStyleBackColor = false;
+            this.btConsole.Click += new System.EventHandler(this.btConsole_Click);
+            // 
+            // btConsoleGo
+            // 
+            this.btConsoleGo.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btConsoleGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btConsoleGo.BackgroundImage")));
+            this.btConsoleGo.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
+            this.btConsoleGo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btConsoleGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConsoleGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsoleGo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConsoleGo.Location = new System.Drawing.Point(119, 311);
+            this.btConsoleGo.Name = "btConsoleGo";
+            this.btConsoleGo.Size = new System.Drawing.Size(15, 15);
+            this.btConsoleGo.TabIndex = 31;
+            this.btConsoleGo.UseVisualStyleBackColor = false;
+            this.btConsoleGo.Visible = false;
+            this.btConsoleGo.Click += new System.EventHandler(this.btConsoleGo_Click);
+            // 
+            // tbConsole
+            // 
+            this.tbConsole.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbConsole.Location = new System.Drawing.Point(25, 309);
+            this.tbConsole.Name = "tbConsole";
+            this.tbConsole.Size = new System.Drawing.Size(88, 20);
+            this.tbConsole.TabIndex = 8;
+            this.tbConsole.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,7 +593,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLUXUS - Gerador de Usuários";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -598,6 +645,9 @@
         private System.Windows.Forms.ToolStripMenuItem parâmetrosDoSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button btConsoleGo;
+        private System.Windows.Forms.Button btConsole;
+        private System.Windows.Forms.TextBox tbConsole;
     }
 }
 

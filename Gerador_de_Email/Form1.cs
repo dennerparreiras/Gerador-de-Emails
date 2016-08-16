@@ -29,31 +29,16 @@ namespace Gerador_de_Email
         static bool checkC = false;
         static bool checkO = false;
         static bool checkS = false;
+        static bool checkG = false;
 
+        const string normalModeText = "FLUXUS - Gerador de Usuários";
+        const string adminModeText = "FLUXUS - Gerador de Usuários (Modo Administrador)";
 
         /// <summary>
         /// Construtor do formulário principal.
         /// </summary>
         public MainForm(bool admin)
         {
-            /////////////////////////////////////////
-            admin = true;
-            /////////////////////////////////////////
-
-            adminStatus = admin;
-            if (adminStatus)
-            {
-                MessageBox.Show("Modo Administrador ativado.");
-            }
-
-            InitializeComponent();
-
-            if (!adminStatus)
-            {
-                administrador_TSMI.Enabled = false;
-                administrador_TSMI.Visible = false;
-            }
-
             if (File.Exists(@"data/config.data"))
             {
                 config = new CustomBinarySerializer<Parameters>().DeserializeFromBinaryFile(@"data/config.data");
@@ -62,6 +47,14 @@ namespace Gerador_de_Email
             {
                 new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
             }
+
+            /////////////////////////////////////////
+            if (!admin)
+                admin = config.startAdmMode;
+            adminStatus = admin;
+            InitializeComponent();
+            ChangeFormDesign(adminStatus);
+            /////////////////////////////////////////
 
             dataSourceDom = FileManager.Read(config.listDomain);
             dataSourceLoc = FileManager.Read(config.listPlace);
@@ -74,14 +67,14 @@ namespace Gerador_de_Email
                 if (dataSourceLoc != null)
                     FileManager.Quicksort(dataSourceLoc, 0, dataSourceLoc.Length - 1);
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 MessageBox.Show(erro.Message, "Falha de Ordenação");
             }
 
             cbEmail.DataSource = dataSourceDom;
             cbLocal.DataSource = dataSourceLoc;
-
+            tbConsole.Parent = pictureBox1;
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
             label2.Parent = pictureBox1;
@@ -98,6 +91,9 @@ namespace Gerador_de_Email
             label7.BackColor = Color.Transparent;
             label8.Parent = pictureBox1;
             label8.BackColor = Color.Transparent;
+            btConsole.Parent = pictureBox1;
+            btConsole.BackColor = Color.Transparent;
+
 
             if (File.Exists(config.icon))
             {
@@ -118,6 +114,7 @@ namespace Gerador_de_Email
                 FileManager.ReadXML(config.XMLFile, ref usuarios);
             }
 
+            this.AcceptButton = btGenerate;
         }
 
         /// <summary>
@@ -144,16 +141,30 @@ namespace Gerador_de_Email
 
         public void ClearFields()
         {
-            tbNome.Text = "";
-            tbEmail.Text = "";
-            tbCargo.Text = "";
-            mtbCPF.Text = "";
-            tbObservacoes.Text = "";
+            try
+            {
+                tbNome.Clear();
+                tbEmail.Clear();
+                tbCargo.Clear();
+                mtbCPF.Clear();
+                tbObservacoes.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Houve uma falha ao tentar limpar os campos!");
+            }
         }
 
         private void btCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(tbReturn.Text);
+            try
+            {
+                Clipboard.SetText(tbReturn.Text);
+            }
+            catch
+            {
+                Clipboard.SetText(" ");
+            }
         }
 
         private void btGenerate_Click(object sender, EventArgs e)
@@ -177,29 +188,37 @@ namespace Gerador_de_Email
         private void checkEmail_CheckedChanged(object sender, EventArgs e)
         {
             checkE = checkEmail.Checked;
-            tbEmail.Enabled = ((checkE) ? true : false);
-
+            tbEmail.Enabled = checkE;
+            if (!checkC)
+            {
+                tbEmail.Clear();
+            }
         }
 
         private void checkCPF_CheckedChanged(object sender, EventArgs e)
         {
             checkC = checkCPF.Checked;
-            mtbCPF.Enabled = ((checkC) ? true : false);
-
+            mtbCPF.Enabled = checkC;
+            if (!checkC)
+            {
+                mtbCPF.Clear();
+            }
         }
 
         private void checkObservacao_CheckedChanged(object sender, EventArgs e)
         {
             checkO = checkObservacao.Checked;
-            tbObservacoes.Enabled = ((checkO) ? true : false);
-
+            tbObservacoes.Enabled = checkO;
         }
 
         private void checkSENHA_CheckedChanged(object sender, EventArgs e)
         {
             checkS = checkSENHA.Checked;
-            tbSenha.Enabled = ((checkS) ? true : false);
-
+            tbSenha.Enabled = checkS;
+            if (!checkS)
+            {
+                tbSenha.Clear();
+            }
         }
 
         private void usuáriosCriadosTSMI_Click(object sender, EventArgs e)
@@ -216,11 +235,6 @@ namespace Gerador_de_Email
         {
             FileManager.WriteXML(config.XMLFile, ref usuarios, true);
             new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void carregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -275,7 +289,6 @@ namespace Gerador_de_Email
                     }
                 }
             }
-
         }
 
         private void administrador_TSMI_Click(object sender, EventArgs e)
@@ -285,30 +298,96 @@ namespace Gerador_de_Email
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            /*
-            if (this.WindowState == FormWindowState.Minimized)
+            if (this.WindowState == FormWindowState.Minimized && config.startMinimized)
             {
                 this.Visible = false;
                 this.ShowInTaskbar = false;
                 this.WindowState = FormWindowState.Minimized;
                 notifyIcon1.Visible = true;
             }
-            */
+
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            /*
-            this.Visible = true;
-            this.WindowState = FormWindowState.Normal;
-            this.ShowInTaskbar = true;
-            notifyIcon1.Visible = false;
-            */
+            if (config.startMinimized)
+            {
+                this.Visible = true;
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+                notifyIcon1.Visible = false;
+            }
         }
 
         private void parâmetrosDoSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ParametersForm(ref config).ShowDialog();
+        }
+
+        private void btConsole_Click(object sender, EventArgs e)
+        {
+            checkG = !checkG;
+            tbConsole.Visible = checkG;
+            btConsoleGo.Visible = checkG;
+            if (!checkG)
+            {
+                tbConsole.Clear();
+            }
+        }
+
+        private void btConsoleGo_Click(object sender, EventArgs e)
+        {
+            switch (tbConsole.Text.ToUpper())
+            {
+                case "CONFIG ADMINMODE ON":
+                case "CONFIG NORMALMODE OFF":
+                case "CONFIG MODE ADMIN":
+                    {
+                        ChangeFormDesign(true);
+                        break;
+                    }
+
+                case "CONFIG ADMINMODE OFF":
+                case "CONFIG NORMALMODE ON":
+                case "CONFIG MODE NORMAL":
+                    {
+                        ChangeFormDesign(false);
+                        break;
+                    }
+
+                default:
+                    {
+                        
+                    }
+                    break;
+            }
+            tbConsole.Clear();
+        }
+
+        private void ChangeFormDesign(bool Admin)
+        {
+            if (Admin)
+            {
+                administrador_TSMI.Enabled = true;
+                administrador_TSMI.Visible = true;
+                this.Text = adminModeText;
+                this.MenuBar.BackgroundImage = Gerador_de_Email.Properties.Resources.red_wall;
+                this.pictureBox1.Image = Gerador_de_Email.Properties.Resources.red_silk_background;
+                this.btClean.BackgroundImage = Gerador_de_Email.Properties.Resources.red_wall;
+                this.btGenerate.BackgroundImage = Gerador_de_Email.Properties.Resources.red_wall;
+                this.btCopy.BackgroundImage = Gerador_de_Email.Properties.Resources.red_wall;
+            }
+            else
+            {
+                administrador_TSMI.Enabled = false;
+                administrador_TSMI.Visible = false;
+                this.Text = normalModeText;
+                this.MenuBar.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar2;
+                this.pictureBox1.Image = Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
+                this.btClean.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
+                this.btGenerate.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
+                this.btCopy.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
+            }
         }
     }
 }

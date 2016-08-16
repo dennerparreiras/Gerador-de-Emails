@@ -118,43 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bar1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button-light.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Denner Parreiras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Denner Parreiras.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="red_silk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red_silk.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button-dark.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="abstract_blue_backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract_blue_backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bar.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bar2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-dark.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="abstract_blue_backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abstract_blue_backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_bar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big_bar2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big_bar.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="red_silk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_silk.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_silk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue_silk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="big_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big_bar.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_bar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big_bar2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Denner Parreiras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Denner Parreiras.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_silk_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_silk_bar.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-light.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="red_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red_wall.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_silk_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_silk_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

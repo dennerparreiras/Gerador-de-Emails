@@ -34,12 +34,16 @@
             this.tbLocal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.btPrevious = new System.Windows.Forms.Button();
+            this.btNext = new System.Windows.Forms.Button();
             this.tbSenha = new System.Windows.Forms.TextBox();
+            this.btLast = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbObservacoes = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btFirst = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbCargo = new System.Windows.Forms.TextBox();
@@ -48,14 +52,6 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelStatus = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btDelete = new System.Windows.Forms.Button();
-            this.btPrevious = new System.Windows.Forms.Button();
-            this.btNext = new System.Windows.Forms.Button();
-            this.btLast = new System.Windows.Forms.Button();
-            this.btFirst = new System.Windows.Forms.Button();
             this.btOnly1Name = new System.Windows.Forms.Button();
             this.btOnly2Name = new System.Windows.Forms.Button();
             this.btCopyAll = new System.Windows.Forms.Button();
@@ -67,6 +63,10 @@
             this.btCopyCPF = new System.Windows.Forms.Button();
             this.btCopyEmail = new System.Windows.Forms.Button();
             this.btCopyUsuario = new System.Windows.Forms.Button();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btDelete = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,6 +76,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Controls.Add(this.tbCount);
             this.groupBox1.Controls.Add(this.tbLocal);
             this.groupBox1.Controls.Add(this.label8);
@@ -149,6 +150,42 @@
             this.tbUsuario.Size = new System.Drawing.Size(277, 20);
             this.tbUsuario.TabIndex = 33;
             // 
+            // btPrevious
+            // 
+            this.btPrevious.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btPrevious.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btPrevious.BackgroundImage")));
+            this.btPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPrevious.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btPrevious.Location = new System.Drawing.Point(101, 339);
+            this.btPrevious.Name = "btPrevious";
+            this.btPrevious.Size = new System.Drawing.Size(50, 23);
+            this.btPrevious.TabIndex = 31;
+            this.btPrevious.Text = "<<";
+            this.btPrevious.UseVisualStyleBackColor = false;
+            this.btPrevious.Click += new System.EventHandler(this.btPrevious_Click);
+            this.btPrevious.MouseLeave += new System.EventHandler(this.btPrevious_MouseLeave);
+            this.btPrevious.MouseHover += new System.EventHandler(this.btPrevious_MouseHover);
+            // 
+            // btNext
+            // 
+            this.btNext.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
+            this.btNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNext.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btNext.Location = new System.Drawing.Point(203, 339);
+            this.btNext.Name = "btNext";
+            this.btNext.Size = new System.Drawing.Size(49, 23);
+            this.btNext.TabIndex = 30;
+            this.btNext.Text = ">>";
+            this.btNext.UseVisualStyleBackColor = false;
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
+            this.btNext.MouseLeave += new System.EventHandler(this.btNext_MouseLeave);
+            this.btNext.MouseHover += new System.EventHandler(this.btNext_MouseHover);
+            // 
             // tbSenha
             // 
             this.tbSenha.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -158,6 +195,24 @@
             this.tbSenha.ReadOnly = true;
             this.tbSenha.Size = new System.Drawing.Size(110, 20);
             this.tbSenha.TabIndex = 28;
+            // 
+            // btLast
+            // 
+            this.btLast.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLast.BackgroundImage")));
+            this.btLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLast.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btLast.Location = new System.Drawing.Point(258, 339);
+            this.btLast.Name = "btLast";
+            this.btLast.Size = new System.Drawing.Size(86, 23);
+            this.btLast.TabIndex = 16;
+            this.btLast.Text = ">|";
+            this.btLast.UseVisualStyleBackColor = false;
+            this.btLast.Click += new System.EventHandler(this.btLast_Click);
+            this.btLast.MouseLeave += new System.EventHandler(this.btLast_MouseLeave);
+            this.btLast.MouseHover += new System.EventHandler(this.btLast_MouseHover);
             // 
             // label7
             // 
@@ -212,6 +267,24 @@
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Local";
+            // 
+            // btFirst
+            // 
+            this.btFirst.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btFirst.BackgroundImage")));
+            this.btFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btFirst.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btFirst.Location = new System.Drawing.Point(9, 339);
+            this.btFirst.Name = "btFirst";
+            this.btFirst.Size = new System.Drawing.Size(86, 23);
+            this.btFirst.TabIndex = 15;
+            this.btFirst.Text = "|<";
+            this.btFirst.UseVisualStyleBackColor = false;
+            this.btFirst.Click += new System.EventHandler(this.btFirst_Click);
+            this.btFirst.MouseLeave += new System.EventHandler(this.btFirst_MouseLeave);
+            this.btFirst.MouseHover += new System.EventHandler(this.btFirst_MouseHover);
             // 
             // label4
             // 
@@ -287,6 +360,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Controls.Add(this.btOnly1Name);
             this.groupBox2.Controls.Add(this.btOnly2Name);
             this.groupBox2.Controls.Add(this.btCopyAll);
@@ -306,135 +380,6 @@
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Copiar";
-            // 
-            // labelStatus
-            // 
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelStatus.Location = new System.Drawing.Point(28, 421);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(27, 13);
-            this.labelStatus.TabIndex = 36;
-            this.labelStatus.Text = ".....";
-            this.labelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.labelStatus);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btDelete);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(521, 444);
-            this.panel1.TabIndex = 48;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(27, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(375, 20);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Exibição de Dados dos Usuários Cadastrados";
-            // 
-            // btDelete
-            // 
-            this.btDelete.BackColor = System.Drawing.Color.DarkRed;
-            this.btDelete.BackgroundImage = global::Gerador_de_Email.Properties.Resources.red_silk;
-            this.btDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btDelete.Location = new System.Drawing.Point(390, 371);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(101, 46);
-            this.btDelete.TabIndex = 47;
-            this.btDelete.Text = "Apagar usuário";
-            this.btDelete.UseVisualStyleBackColor = false;
-            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
-            this.btDelete.MouseLeave += new System.EventHandler(this.btDelete_MouseLeave);
-            this.btDelete.MouseHover += new System.EventHandler(this.btDelete_MouseHover);
-            // 
-            // btPrevious
-            // 
-            this.btPrevious.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btPrevious.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btPrevious.BackgroundImage")));
-            this.btPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPrevious.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPrevious.Location = new System.Drawing.Point(101, 339);
-            this.btPrevious.Name = "btPrevious";
-            this.btPrevious.Size = new System.Drawing.Size(50, 23);
-            this.btPrevious.TabIndex = 31;
-            this.btPrevious.Text = "<<";
-            this.btPrevious.UseVisualStyleBackColor = false;
-            this.btPrevious.Click += new System.EventHandler(this.btPrevious_Click);
-            this.btPrevious.MouseLeave += new System.EventHandler(this.btPrevious_MouseLeave);
-            this.btPrevious.MouseHover += new System.EventHandler(this.btPrevious_MouseHover);
-            // 
-            // btNext
-            // 
-            this.btNext.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
-            this.btNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNext.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btNext.Location = new System.Drawing.Point(203, 339);
-            this.btNext.Name = "btNext";
-            this.btNext.Size = new System.Drawing.Size(49, 23);
-            this.btNext.TabIndex = 30;
-            this.btNext.Text = ">>";
-            this.btNext.UseVisualStyleBackColor = false;
-            this.btNext.Click += new System.EventHandler(this.btNext_Click);
-            this.btNext.MouseLeave += new System.EventHandler(this.btNext_MouseLeave);
-            this.btNext.MouseHover += new System.EventHandler(this.btNext_MouseHover);
-            // 
-            // btLast
-            // 
-            this.btLast.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLast.BackgroundImage")));
-            this.btLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLast.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btLast.Location = new System.Drawing.Point(258, 339);
-            this.btLast.Name = "btLast";
-            this.btLast.Size = new System.Drawing.Size(86, 23);
-            this.btLast.TabIndex = 16;
-            this.btLast.Text = ">|";
-            this.btLast.UseVisualStyleBackColor = false;
-            this.btLast.Click += new System.EventHandler(this.btLast_Click);
-            this.btLast.MouseLeave += new System.EventHandler(this.btLast_MouseLeave);
-            this.btLast.MouseHover += new System.EventHandler(this.btLast_MouseHover);
-            // 
-            // btFirst
-            // 
-            this.btFirst.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btFirst.BackgroundImage")));
-            this.btFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFirst.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btFirst.Location = new System.Drawing.Point(9, 339);
-            this.btFirst.Name = "btFirst";
-            this.btFirst.Size = new System.Drawing.Size(86, 23);
-            this.btFirst.TabIndex = 15;
-            this.btFirst.Text = "|<";
-            this.btFirst.UseVisualStyleBackColor = false;
-            this.btFirst.Click += new System.EventHandler(this.btFirst_Click);
-            this.btFirst.MouseLeave += new System.EventHandler(this.btFirst_MouseLeave);
-            this.btFirst.MouseHover += new System.EventHandler(this.btFirst_MouseHover);
             // 
             // btOnly1Name
             // 
@@ -644,6 +589,65 @@
             this.btCopyUsuario.Click += new System.EventHandler(this.btCopyUsuario_Click);
             this.btCopyUsuario.MouseLeave += new System.EventHandler(this.btCopyUsuario_MouseLeave);
             this.btCopyUsuario.MouseHover += new System.EventHandler(this.btCopyUsuario_MouseHover);
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.BackColor = System.Drawing.Color.RoyalBlue;
+            this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelStatus.Location = new System.Drawing.Point(28, 421);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(11, 13);
+            this.labelStatus.TabIndex = 36;
+            this.labelStatus.Text = ".";
+            this.labelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelStatus);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.btDelete);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(521, 444);
+            this.panel1.TabIndex = 48;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(27, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(375, 20);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Exibição de Dados dos Usuários Cadastrados";
+            // 
+            // btDelete
+            // 
+            this.btDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btDelete.BackgroundImage = global::Gerador_de_Email.Properties.Resources.red_silk;
+            this.btDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDelete.Location = new System.Drawing.Point(390, 371);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(101, 46);
+            this.btDelete.TabIndex = 47;
+            this.btDelete.Text = "Apagar usuário";
+            this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            this.btDelete.MouseLeave += new System.EventHandler(this.btDelete_MouseLeave);
+            this.btDelete.MouseHover += new System.EventHandler(this.btDelete_MouseHover);
             // 
             // pictureBox1
             // 
