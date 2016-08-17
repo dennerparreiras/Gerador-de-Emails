@@ -52,6 +52,9 @@
             this.tbLocal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkGenerateEnter = new System.Windows.Forms.CheckBox();
+            this.checkDeleteUserBt = new System.Windows.Forms.CheckBox();
             this.checkAdm = new System.Windows.Forms.CheckBox();
             this.checkMinim = new System.Windows.Forms.CheckBox();
             this.btSalvar = new System.Windows.Forms.Button();
@@ -60,6 +63,7 @@
             this.rbRandom = new System.Windows.Forms.RadioButton();
             this.rbOrdered = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btDefaultPass = new System.Windows.Forms.Button();
             this.tbCharEspecial = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,7 +72,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.numNumeros = new System.Windows.Forms.NumericUpDown();
             this.numLetras = new System.Windows.Forms.NumericUpDown();
-            this.btDefaultPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -369,15 +372,48 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Navy;
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.checkGenerateEnter);
+            this.groupBox2.Controls.Add(this.checkDeleteUserBt);
             this.groupBox2.Controls.Add(this.checkAdm);
             this.groupBox2.Controls.Add(this.checkMinim);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 270);
+            this.groupBox2.Location = new System.Drawing.Point(12, 212);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(323, 119);
+            this.groupBox2.Size = new System.Drawing.Size(323, 279);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Outras opções";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label10.Location = new System.Drawing.Point(22, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(239, 12);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "(É necessário reiniciar o programa para ativar esta opção)";
+            // 
+            // checkGenerateEnter
+            // 
+            this.checkGenerateEnter.AutoSize = true;
+            this.checkGenerateEnter.Location = new System.Drawing.Point(24, 120);
+            this.checkGenerateEnter.Name = "checkGenerateEnter";
+            this.checkGenerateEnter.Size = new System.Drawing.Size(242, 17);
+            this.checkGenerateEnter.TabIndex = 1;
+            this.checkGenerateEnter.Text = "Gerar dados de usuário pressionando ENTER";
+            this.checkGenerateEnter.UseVisualStyleBackColor = true;
+            // 
+            // checkDeleteUserBt
+            // 
+            this.checkDeleteUserBt.AutoSize = true;
+            this.checkDeleteUserBt.Location = new System.Drawing.Point(24, 70);
+            this.checkDeleteUserBt.Name = "checkDeleteUserBt";
+            this.checkDeleteUserBt.Size = new System.Drawing.Size(174, 17);
+            this.checkDeleteUserBt.TabIndex = 1;
+            this.checkDeleteUserBt.Text = "Ocultar botão \"Apagar usuário\"";
+            this.checkDeleteUserBt.UseVisualStyleBackColor = true;
             // 
             // checkAdm
             // 
@@ -407,7 +443,7 @@
             this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Location = new System.Drawing.Point(462, 366);
+            this.btSalvar.Location = new System.Drawing.Point(463, 468);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(155, 23);
             this.btSalvar.TabIndex = 12;
@@ -422,7 +458,7 @@
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancelar.ForeColor = System.Drawing.Color.White;
-            this.btCancelar.Location = new System.Drawing.Point(341, 366);
+            this.btCancelar.Location = new System.Drawing.Point(342, 468);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(115, 23);
             this.btCancelar.TabIndex = 13;
@@ -436,17 +472,17 @@
             this.groupBox3.Controls.Add(this.rbRandom);
             this.groupBox3.Controls.Add(this.rbOrdered);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 212);
+            this.groupBox3.Location = new System.Drawing.Point(9, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(323, 52);
+            this.groupBox3.Size = new System.Drawing.Size(261, 67);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Gerador de Senhas";
+            this.groupBox3.Text = "Aleatoriedade das Senhas";
             // 
             // rbRandom
             // 
             this.rbRandom.AutoSize = true;
-            this.rbRandom.Location = new System.Drawing.Point(166, 23);
+            this.rbRandom.Location = new System.Drawing.Point(21, 42);
             this.rbRandom.Name = "rbRandom";
             this.rbRandom.Size = new System.Drawing.Size(66, 17);
             this.rbRandom.TabIndex = 8;
@@ -458,7 +494,7 @@
             // 
             this.rbOrdered.AutoSize = true;
             this.rbOrdered.Checked = true;
-            this.rbOrdered.Location = new System.Drawing.Point(11, 23);
+            this.rbOrdered.Location = new System.Drawing.Point(21, 19);
             this.rbOrdered.Name = "rbOrdered";
             this.rbOrdered.Size = new System.Drawing.Size(72, 17);
             this.rbOrdered.TabIndex = 7;
@@ -470,6 +506,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Navy;
+            this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.btDefaultPass);
             this.groupBox4.Controls.Add(this.tbCharEspecial);
             this.groupBox4.Controls.Add(this.label6);
@@ -482,14 +519,30 @@
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(341, 212);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 148);
+            this.groupBox4.Size = new System.Drawing.Size(276, 250);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Opções de Senha";
             // 
+            // btDefaultPass
+            // 
+            this.btDefaultPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btDefaultPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDefaultPass.BackgroundImage")));
+            this.btDefaultPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btDefaultPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDefaultPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDefaultPass.ForeColor = System.Drawing.Color.White;
+            this.btDefaultPass.Location = new System.Drawing.Point(195, 196);
+            this.btDefaultPass.Name = "btDefaultPass";
+            this.btDefaultPass.Size = new System.Drawing.Size(75, 36);
+            this.btDefaultPass.TabIndex = 20;
+            this.btDefaultPass.Text = "Default";
+            this.btDefaultPass.UseVisualStyleBackColor = false;
+            this.btDefaultPass.Click += new System.EventHandler(this.ResetPassConfig);
+            // 
             // tbCharEspecial
             // 
-            this.tbCharEspecial.Location = new System.Drawing.Point(9, 115);
+            this.tbCharEspecial.Location = new System.Drawing.Point(9, 212);
             this.tbCharEspecial.Name = "tbCharEspecial";
             this.tbCharEspecial.Size = new System.Drawing.Size(180, 20);
             this.tbCharEspecial.TabIndex = 8;
@@ -499,7 +552,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(6, 99);
+            this.label6.Location = new System.Drawing.Point(6, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 13);
             this.label6.TabIndex = 7;
@@ -510,7 +563,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 73);
+            this.label7.Location = new System.Drawing.Point(18, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 13);
             this.label7.TabIndex = 6;
@@ -520,7 +573,7 @@
             // 
             this.numCharEspeciais.BackColor = System.Drawing.Color.Wheat;
             this.numCharEspeciais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numCharEspeciais.Location = new System.Drawing.Point(168, 71);
+            this.numCharEspeciais.Location = new System.Drawing.Point(180, 159);
             this.numCharEspeciais.Name = "numCharEspeciais";
             this.numCharEspeciais.Size = new System.Drawing.Size(72, 20);
             this.numCharEspeciais.TabIndex = 5;
@@ -530,7 +583,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(6, 47);
+            this.label8.Location = new System.Drawing.Point(18, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 13);
             this.label8.TabIndex = 4;
@@ -541,7 +594,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(6, 21);
+            this.label9.Location = new System.Drawing.Point(18, 109);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 13);
             this.label9.TabIndex = 3;
@@ -551,7 +604,7 @@
             // 
             this.numNumeros.BackColor = System.Drawing.Color.Wheat;
             this.numNumeros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numNumeros.Location = new System.Drawing.Point(168, 45);
+            this.numNumeros.Location = new System.Drawing.Point(180, 133);
             this.numNumeros.Name = "numNumeros";
             this.numNumeros.Size = new System.Drawing.Size(72, 20);
             this.numNumeros.TabIndex = 2;
@@ -565,7 +618,7 @@
             // 
             this.numLetras.BackColor = System.Drawing.Color.Wheat;
             this.numLetras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numLetras.Location = new System.Drawing.Point(168, 19);
+            this.numLetras.Location = new System.Drawing.Point(180, 107);
             this.numLetras.Name = "numLetras";
             this.numLetras.Size = new System.Drawing.Size(72, 20);
             this.numLetras.TabIndex = 1;
@@ -575,29 +628,12 @@
             0,
             0});
             // 
-            // btDefaultPass
-            // 
-            this.btDefaultPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btDefaultPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDefaultPass.BackgroundImage")));
-            this.btDefaultPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btDefaultPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDefaultPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDefaultPass.ForeColor = System.Drawing.Color.White;
-            this.btDefaultPass.Location = new System.Drawing.Point(195, 99);
-            this.btDefaultPass.Name = "btDefaultPass";
-            this.btDefaultPass.Size = new System.Drawing.Size(75, 36);
-            this.btDefaultPass.TabIndex = 20;
-            this.btDefaultPass.Text = "Default";
-            this.btDefaultPass.UseVisualStyleBackColor = false;
-            this.btDefaultPass.Click += new System.EventHandler(this.ResetPassConfig);
-            // 
             // ParametersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
-            this.ClientSize = new System.Drawing.Size(630, 405);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(630, 503);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
@@ -665,5 +701,8 @@
         private System.Windows.Forms.NumericUpDown numNumeros;
         private System.Windows.Forms.NumericUpDown numLetras;
         private System.Windows.Forms.Button btDefaultPass;
+        private System.Windows.Forms.CheckBox checkDeleteUserBt;
+        private System.Windows.Forms.CheckBox checkGenerateEnter;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -16,11 +16,14 @@ namespace Gerador_de_Email.forms
     public partial class ReportForm : Form
     {
         private List<User> users = null;
+        //private Parameters Config = new Parameters();
         private int count = 0;
 
-        public ReportForm(ref List<User> usersList)
+        public ReportForm(ref List<User> usersList, ref Parameters config)
         {
             users = usersList;
+            //Config = config;
+
             if (usersList.Count > 0)
             {
                 InitializeComponent();
@@ -41,6 +44,9 @@ namespace Gerador_de_Email.forms
             {
                 MessageBox.Show("Ainda não foram gerados usuários!");
             }
+
+                btDelete.Visible = !config.deleteUserButton;
+                btDelete.Enabled = !config.deleteUserButton;
         }
 
         public void FillFields(User usuario)

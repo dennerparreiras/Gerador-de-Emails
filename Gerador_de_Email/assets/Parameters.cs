@@ -16,6 +16,8 @@ namespace Gerador_de_Email.assets
         public string icon { get; set; }
         public bool startMinimized { get; set; }
         public bool startAdmMode { get; set; }
+        public bool deleteUserButton { get; set; }
+        public bool generateEnterButton { get; set; }
 
         public PassConfig passwordConfig { get; set; }
 
@@ -28,6 +30,8 @@ namespace Gerador_de_Email.assets
             this.icon = @"data/app.ico";
             this.startMinimized = false;
             this.startAdmMode = false;
+            this.deleteUserButton = false;
+            this.generateEnterButton = false;
             this.passwordConfig = new PassConfig();
         }
     }

@@ -33,6 +33,8 @@ namespace Gerador_de_Email.forms
             tbIcone.Text = Config.icon;
             checkMinim.Checked = Config.startMinimized;
             checkAdm.Checked = Config.startAdmMode;
+            checkDeleteUserBt.Checked = Config.deleteUserButton;
+            checkGenerateEnter.Checked = Config.generateEnterButton;
 
             tbCharEspecial.Text = Config.passwordConfig.charString;
             numLetras.Value = Config.passwordConfig.letters;
@@ -79,6 +81,8 @@ namespace Gerador_de_Email.forms
                     Config.icon = tbIcone.Text;
                     Config.startMinimized = checkMinim.Checked;
                     Config.startAdmMode = checkAdm.Checked;
+                    Config.deleteUserButton = checkDeleteUserBt.Checked;
+                    Config.generateEnterButton = checkGenerateEnter.Checked;
 
                     Config.passwordConfig.charString = tbCharEspecial.Text;
                     Config.passwordConfig.letters = numLetras.Value;

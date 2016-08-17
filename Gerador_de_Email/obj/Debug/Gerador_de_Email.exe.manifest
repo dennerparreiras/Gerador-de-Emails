@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gerador_de_Email.exe" size="7474184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gerador_de_Email.exe" size="7476232">
       <assemblyIdentity name="Gerador_de_Email" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xh1BzbttbxubpIcxpxdljvYD3629Ov0JC7rjOc2qyJQ=</dsig:DigestValue>
+        <dsig:DigestValue>5uJ9Be58xhyAse99GJznVQkir0X3uNTMcJCTzMaDDvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -39,11 +39,18 @@ namespace Gerador_de_Email
         /// </summary>
         public MainForm(bool admin)
         {
-            if (File.Exists(@"data/config.data"))
+            try
             {
-                config = new CustomBinarySerializer<Parameters>().DeserializeFromBinaryFile(@"data/config.data");
+                if (File.Exists(@"data/config.data"))
+                {
+                    config = new CustomBinarySerializer<Parameters>().DeserializeFromBinaryFile(@"data/config.data");
+                }
+                else
+                {
+                    new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
+                }
             }
-            else
+            catch
             {
                 new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
             }
@@ -59,7 +66,7 @@ namespace Gerador_de_Email
             dataSourceDom = FileManager.Read(config.listDomain);
             dataSourceLoc = FileManager.Read(config.listPlace);
 
-            // Sort the array
+            //Ordena os Arrays
             try
             {
                 if (dataSourceDom != null)
@@ -72,8 +79,18 @@ namespace Gerador_de_Email
                 MessageBox.Show(erro.Message, "Falha de Ordenação");
             }
 
-            cbEmail.DataSource = dataSourceDom;
-            cbLocal.DataSource = dataSourceLoc;
+            //Dados dos "selects" do formulário
+            try
+            {
+                cbEmail.DataSource = dataSourceDom;
+                cbLocal.DataSource = dataSourceLoc;
+            }
+            catch (Exception erro)
+            {
+                //MessageBox.Show(erro.Message, "Falha na atribuição de dados nos selects!");
+            }
+
+            //Definir transparência dos itens do formulário
             tbConsole.Parent = pictureBox1;
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
@@ -94,16 +111,12 @@ namespace Gerador_de_Email
             btConsole.Parent = pictureBox1;
             btConsole.BackColor = Color.Transparent;
 
-
+            //Icone da bandeja
             if (File.Exists(config.icon))
             {
-                // You should replace the bold icon in the sample below
-                // with an icon of your own choosing.
-                // Note the escape character used (@) when specifying the path.
                 notifyIcon1.Icon = new System.Drawing.Icon(config.icon);
                 notifyIcon1.Visible = true;
                 notifyIcon1.Text = this.Text;
-
                 notifyIcon1.BalloonTipTitle = this.Text;
                 notifyIcon1.BalloonTipText = "O programa está em execução...";
                 notifyIcon1.ShowBalloonTip(500);
@@ -114,7 +127,9 @@ namespace Gerador_de_Email
                 FileManager.ReadXML(config.XMLFile, ref usuarios);
             }
 
-            this.AcceptButton = btGenerate;
+            //Definir tecla enter para gerar dados de usuário
+            if (config.generateEnterButton)
+                this.AcceptButton = btGenerate;
         }
 
         /// <summary>
@@ -129,14 +144,8 @@ namespace Gerador_de_Email
         public bool VerifyFields()
         {
             if (tbNome.Text == "")
-            {
                 MessageBox.Show("Favor preencher o nome do usuário.");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !(tbNome.Text == "");
         }
 
         public void ClearFields()
@@ -169,15 +178,21 @@ namespace Gerador_de_Email
 
         private void btGenerate_Click(object sender, EventArgs e)
         {
+            progressBar.Value = 0;
             if (VerifyFields())
             {
+                progressBar.Value = 25;
                 User auxUser = new User(FileManager.CapitalizarNome(tbNome.Text), mtbCPF.Text, cbLocal.Text, tbCargo.Text, tbEmail.Text, cbEmail.Text, tbSenha.Text, tbObservacoes.Text);
+                progressBar.Value = 75;
                 usuarios.Add(auxUser);
                 tbReturn.Text += PrintUserData(auxUser);
+                progressBar.Value = 80;
+                notifyIcon1.BalloonTipText = "Usuário " + auxUser.Usuario + " criado!";
+                notifyIcon1.ShowBalloonTip(250);
+                progressBar.Value = 95;
+                ClearFields();
             }
-            notifyIcon1.BalloonTipText = "Usuário criado!";
-            notifyIcon1.ShowBalloonTip(250);
-            ClearFields();
+            progressBar.Value = 100;
         }
 
         private void btClean_Click(object sender, EventArgs e)
@@ -225,7 +240,7 @@ namespace Gerador_de_Email
         {
             if (usuarios.Count > 0)
             {
-                new ReportForm(ref usuarios).ShowDialog();
+                new ReportForm(ref usuarios, ref config).ShowDialog();
             }
             else
                 MessageBox.Show("Não foi possível gerar o relatório pois não há usuários registrados.");
@@ -235,6 +250,7 @@ namespace Gerador_de_Email
         {
             FileManager.WriteXML(config.XMLFile, ref usuarios, true);
             new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
+            MessageBox.Show("Dados salvos com sucesso!");
         }
 
         private void carregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,38 +278,8 @@ namespace Gerador_de_Email
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (usuarios.Count > 0)
-            {
-                string msg1, msg2, msg3;
-                msg1 = "As alterações não salvas serão perdidas!";
-                msg2 = "\r\nDeseja salvar as alterações realizadas?";
-                msg3 = "Salvar alterações...";
-
-                DialogResult dialogResult = MessageBox.Show(msg1 + msg2, msg3, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    string msg = "";
-                    try
-                    {
-                        FileManager.WriteXML(config.XMLFile, ref usuarios, true);
-                        new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
-                        msg = "Dados salvos com sucesso!";
-                    }
-                    catch (Exception erro)
-                    {
-                        msg = "Não foi possível salvar os dados!\r\n\r\n" + erro.Message;
-                    }
-                    finally
-                    {
-                        MessageBox.Show(msg);
-                    }
-                }
-            }
-        }
-
-        private void administrador_TSMI_Click(object sender, EventArgs e)
-        {
-
+            SalvarFechar();
+            this.Dispose();
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
@@ -337,6 +323,7 @@ namespace Gerador_de_Email
 
         private void btConsoleGo_Click(object sender, EventArgs e)
         {
+            progressBar.Value = 0;
             switch (tbConsole.Text.ToUpper())
             {
                 case "CONFIG ADMINMODE ON":
@@ -355,13 +342,28 @@ namespace Gerador_de_Email
                         break;
                     }
 
+                case "SHUTDOWN -F":
+                    {
+                        this.Dispose();
+                        break;
+                    }
+
+                case "SHUTDOWN -S":
+                    {
+                        SalvarFechar();
+                        this.Dispose();
+                        break;
+                    }
+
                 default:
                     {
-                        
+
                     }
                     break;
             }
+            progressBar.Value = 95;
             tbConsole.Clear();
+            progressBar.Value = 100;
         }
 
         private void ChangeFormDesign(bool Admin)
@@ -387,6 +389,45 @@ namespace Gerador_de_Email
                 this.btClean.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
                 this.btGenerate.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
                 this.btCopy.BackgroundImage = Gerador_de_Email.Properties.Resources.big_bar;
+            }
+        }
+
+        private void SalvarFechar()
+        {
+            progressBar.Value = 0;
+            if (usuarios.Count > 0)
+            {
+                string msg1, msg2, msg3;
+                msg1 = "As alterações não salvas serão perdidas!";
+                msg2 = "\r\nDeseja salvar as alterações realizadas?";
+                msg3 = "Salvar alterações...";
+                progressBar.Value = 10;
+                DialogResult dialogResult = MessageBox.Show(msg1 + msg2, msg3, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                progressBar.Value = 30;
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string msg = "";
+                    try
+                    {
+                        progressBar.Value = 50;
+                        FileManager.WriteXML(config.XMLFile, ref usuarios, true);
+                        progressBar.Value = 60;
+                        new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(config, @"data/config.data");
+                        progressBar.Value = 70;
+                        msg = "Dados salvos com sucesso!";
+                        progressBar.Value = 90;
+
+                    }
+                    catch (Exception erro)
+                    {
+                        msg = "Não foi possível salvar os dados!\r\n\r\n" + erro.Message;
+                    }
+                    finally
+                    {
+                        progressBar.Value = 100;
+                        MessageBox.Show(msg);
+                    }
+                }
             }
         }
     }

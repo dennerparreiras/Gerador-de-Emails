@@ -51,7 +51,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbReturn = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btConsoleGo = new System.Windows.Forms.Button();
+            this.btConsole = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.btCopy = new System.Windows.Forms.Button();
+            this.btGenerate = new System.Windows.Forms.Button();
+            this.tbConsole = new System.Windows.Forms.TextBox();
+            this.btClean = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,16 +72,10 @@
             this.parâmetrosDoSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.About_TSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.btCopy = new System.Windows.Forms.Button();
-            this.btGenerate = new System.Windows.Forms.Button();
-            this.btClean = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btConsole = new System.Windows.Forms.Button();
-            this.btConsoleGo = new System.Windows.Forms.Button();
-            this.tbConsole = new System.Windows.Forms.TextBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
-            this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -295,6 +296,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.progressBar);
             this.panel1.Controls.Add(this.btConsoleGo);
             this.panel1.Controls.Add(this.btConsole);
             this.panel1.Controls.Add(this.label8);
@@ -326,8 +328,41 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 332);
+            this.panel1.Size = new System.Drawing.Size(657, 348);
             this.panel1.TabIndex = 29;
+            // 
+            // btConsoleGo
+            // 
+            this.btConsoleGo.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btConsoleGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btConsoleGo.BackgroundImage")));
+            this.btConsoleGo.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
+            this.btConsoleGo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btConsoleGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConsoleGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsoleGo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConsoleGo.Location = new System.Drawing.Point(119, 318);
+            this.btConsoleGo.Name = "btConsoleGo";
+            this.btConsoleGo.Size = new System.Drawing.Size(15, 15);
+            this.btConsoleGo.TabIndex = 31;
+            this.btConsoleGo.UseVisualStyleBackColor = false;
+            this.btConsoleGo.Visible = false;
+            this.btConsoleGo.Click += new System.EventHandler(this.btConsoleGo_Click);
+            // 
+            // btConsole
+            // 
+            this.btConsole.BackColor = System.Drawing.Color.SlateGray;
+            this.btConsole.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btConsole.FlatAppearance.BorderSize = 0;
+            this.btConsole.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsole.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConsole.Location = new System.Drawing.Point(4, 318);
+            this.btConsole.Name = "btConsole";
+            this.btConsole.Size = new System.Drawing.Size(15, 15);
+            this.btConsole.TabIndex = 30;
+            this.btConsole.UseVisualStyleBackColor = false;
+            this.btConsole.Click += new System.EventHandler(this.btConsole_Click);
             // 
             // label8
             // 
@@ -340,6 +375,76 @@
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 29;
             this.label8.Text = "Dados do Usuário";
+            // 
+            // btCopy
+            // 
+            this.btCopy.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCopy.BackgroundImage")));
+            this.btCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopy.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btCopy.Location = new System.Drawing.Point(387, 266);
+            this.btCopy.Name = "btCopy";
+            this.btCopy.Size = new System.Drawing.Size(226, 23);
+            this.btCopy.TabIndex = 12;
+            this.btCopy.Text = "Copiar para área de transferência";
+            this.btCopy.UseVisualStyleBackColor = false;
+            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
+            // 
+            // btGenerate
+            // 
+            this.btGenerate.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btGenerate.BackgroundImage")));
+            this.btGenerate.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
+            this.btGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGenerate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btGenerate.Location = new System.Drawing.Point(176, 266);
+            this.btGenerate.Name = "btGenerate";
+            this.btGenerate.Size = new System.Drawing.Size(185, 23);
+            this.btGenerate.TabIndex = 14;
+            this.btGenerate.Text = "Gerar Dados";
+            this.btGenerate.UseVisualStyleBackColor = false;
+            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
+            // 
+            // tbConsole
+            // 
+            this.tbConsole.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbConsole.Location = new System.Drawing.Point(25, 316);
+            this.tbConsole.Name = "tbConsole";
+            this.tbConsole.Size = new System.Drawing.Size(88, 20);
+            this.tbConsole.TabIndex = 8;
+            this.tbConsole.Visible = false;
+            // 
+            // btClean
+            // 
+            this.btClean.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btClean.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClean.BackgroundImage")));
+            this.btClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClean.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btClean.Location = new System.Drawing.Point(84, 266);
+            this.btClean.Name = "btClean";
+            this.btClean.Size = new System.Drawing.Size(86, 23);
+            this.btClean.TabIndex = 16;
+            this.btClean.Text = "Limpar";
+            this.btClean.UseVisualStyleBackColor = false;
+            this.btClean.Click += new System.EventHandler(this.btClean_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(657, 348);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // notifyIcon1
             // 
@@ -447,7 +552,6 @@
             this.administrador_TSMI.Name = "administrador_TSMI";
             this.administrador_TSMI.Size = new System.Drawing.Size(165, 22);
             this.administrador_TSMI.Text = "Administrador";
-            this.administrador_TSMI.Click += new System.EventHandler(this.administrador_TSMI_Click);
             // 
             // parâmetrosDoSistemaToolStripMenuItem
             // 
@@ -474,115 +578,19 @@
             this.About_TSMI.Text = "Sobre";
             this.About_TSMI.Click += new System.EventHandler(this.About_TSMI_Click);
             // 
-            // btCopy
+            // progressBar
             // 
-            this.btCopy.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCopy.BackgroundImage")));
-            this.btCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCopy.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btCopy.Location = new System.Drawing.Point(387, 266);
-            this.btCopy.Name = "btCopy";
-            this.btCopy.Size = new System.Drawing.Size(226, 23);
-            this.btCopy.TabIndex = 12;
-            this.btCopy.Text = "Copiar para área de transferência";
-            this.btCopy.UseVisualStyleBackColor = false;
-            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
-            // 
-            // btGenerate
-            // 
-            this.btGenerate.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btGenerate.BackgroundImage")));
-            this.btGenerate.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
-            this.btGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGenerate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btGenerate.Location = new System.Drawing.Point(176, 266);
-            this.btGenerate.Name = "btGenerate";
-            this.btGenerate.Size = new System.Drawing.Size(185, 23);
-            this.btGenerate.TabIndex = 14;
-            this.btGenerate.Text = "Gerar Dados";
-            this.btGenerate.UseVisualStyleBackColor = false;
-            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
-            // 
-            // btClean
-            // 
-            this.btClean.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btClean.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClean.BackgroundImage")));
-            this.btClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClean.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btClean.Location = new System.Drawing.Point(84, 266);
-            this.btClean.Name = "btClean";
-            this.btClean.Size = new System.Drawing.Size(86, 23);
-            this.btClean.TabIndex = 16;
-            this.btClean.Text = "Limpar";
-            this.btClean.UseVisualStyleBackColor = false;
-            this.btClean.Click += new System.EventHandler(this.btClean_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Gerador_de_Email.Properties.Resources.abstract_blue_backgrounds;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(657, 332);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btConsole
-            // 
-            this.btConsole.BackColor = System.Drawing.Color.SlateGray;
-            this.btConsole.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btConsole.FlatAppearance.BorderSize = 0;
-            this.btConsole.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
-            this.btConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsole.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btConsole.Location = new System.Drawing.Point(4, 311);
-            this.btConsole.Name = "btConsole";
-            this.btConsole.Size = new System.Drawing.Size(15, 15);
-            this.btConsole.TabIndex = 30;
-            this.btConsole.UseVisualStyleBackColor = false;
-            this.btConsole.Click += new System.EventHandler(this.btConsole_Click);
-            // 
-            // btConsoleGo
-            // 
-            this.btConsoleGo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btConsoleGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btConsoleGo.BackgroundImage")));
-            this.btConsoleGo.FlatAppearance.BorderColor = System.Drawing.Color.Azure;
-            this.btConsoleGo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btConsoleGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConsoleGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsoleGo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btConsoleGo.Location = new System.Drawing.Point(119, 311);
-            this.btConsoleGo.Name = "btConsoleGo";
-            this.btConsoleGo.Size = new System.Drawing.Size(15, 15);
-            this.btConsoleGo.TabIndex = 31;
-            this.btConsoleGo.UseVisualStyleBackColor = false;
-            this.btConsoleGo.Visible = false;
-            this.btConsoleGo.Click += new System.EventHandler(this.btConsoleGo_Click);
-            // 
-            // tbConsole
-            // 
-            this.tbConsole.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbConsole.Location = new System.Drawing.Point(25, 309);
-            this.tbConsole.Name = "tbConsole";
-            this.tbConsole.Size = new System.Drawing.Size(88, 20);
-            this.tbConsole.TabIndex = 8;
-            this.tbConsole.Visible = false;
+            this.progressBar.Location = new System.Drawing.Point(0, 338);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(657, 10);
+            this.progressBar.TabIndex = 32;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(657, 332);
+            this.ClientSize = new System.Drawing.Size(657, 348);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -596,9 +604,9 @@
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -648,6 +656,7 @@
         private System.Windows.Forms.Button btConsoleGo;
         private System.Windows.Forms.Button btConsole;
         private System.Windows.Forms.TextBox tbConsole;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 

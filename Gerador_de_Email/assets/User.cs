@@ -22,6 +22,7 @@ namespace Gerador_de_Email.assets
         private string _senha;
         private string _cpf;
         private string _observacao;
+        public PassConfig _configSenha;
 
         public string Cargo { get { return _cargo; } set { _cargo = value; } }
         public string Local { get { return _local; } set { _local = value; } }
@@ -32,6 +33,7 @@ namespace Gerador_de_Email.assets
         public string Senha { get { return _senha; } set { _senha = value; } }
         public string CPF { get { return _cpf; } set { _cpf = value; } }
         public string Observacao { get { return _observacao; } set { _observacao = value; } }
+        public PassConfig ConfigSenha { get { return _configSenha; } set { _configSenha = value; } }
 
         /// <summary>
         /// Construtor do objeto User (Usuário).
@@ -45,7 +47,7 @@ namespace Gerador_de_Email.assets
         /// <param name="senha"> Senha do usuário para acesso à rede e email.</param>
         /// <param name="observacao"> Observações relacionadas ao usuário.</param>
 
-        public User(string nome, string cpf, string local, string cargo, string usuario, string dominio, string senha, string observacao)
+        public User(string nome, string cpf, string local, string cargo, string usuario, string dominio, string senha, string observacao, PassConfig senhaConfig)
         {
             this._nome = nome;
             this._dominioEmail = dominio;
@@ -85,11 +87,12 @@ namespace Gerador_de_Email.assets
             this._email = " ";
             this._cpf = " ";
             this._observacao = " ";
+            this.ConfigSenha = new PassConfig();
         }
 
         private string CreatePassword()
         {
-            int str = 2, num = 4;
+            int str = (int)ConfigSenha.letters, num = (int)ConfigSenha.numbers;
             const string validTXT = "abcdefghijklmnopqrstuvwxyz";
             const string validNUM = "1234567890";
 
