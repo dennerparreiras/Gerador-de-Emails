@@ -182,7 +182,7 @@ namespace Gerador_de_Email
             if (VerifyFields())
             {
                 progressBar.Value = 25;
-                User auxUser = new User(FileManager.CapitalizarNome(tbNome.Text), mtbCPF.Text, cbLocal.Text, tbCargo.Text, tbEmail.Text, cbEmail.Text, tbSenha.Text, tbObservacoes.Text);
+                User auxUser = new User(FileManager.CapitalizarNome(tbNome.Text), mtbCPF.Text, cbLocal.Text, tbCargo.Text, tbEmail.Text, cbEmail.Text, tbSenha.Text, tbObservacoes.Text, config.passwordConfig);
                 progressBar.Value = 75;
                 usuarios.Add(auxUser);
                 tbReturn.Text += PrintUserData(auxUser);

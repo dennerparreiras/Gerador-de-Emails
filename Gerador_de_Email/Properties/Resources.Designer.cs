@@ -145,7 +145,7 @@ namespace Gerador_de_Email.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap button_dark {
             get {
-                object obj = ResourceManager.GetObject("button-dark", resourceCulture);
+                object obj = ResourceManager.GetObject("button_dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +155,7 @@ namespace Gerador_de_Email.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap button_light {
             get {
-                object obj = ResourceManager.GetObject("button-light", resourceCulture);
+                object obj = ResourceManager.GetObject("button_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Gerador_de_Email.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Denner_Parreiras {
+        internal static System.Drawing.Bitmap DennerParreiras {
             get {
-                object obj = ResourceManager.GetObject("Denner Parreiras", resourceCulture);
+                object obj = ResourceManager.GetObject("DennerParreiras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -85,9 +85,9 @@ namespace Gerador_de_Email.forms
                     Config.generateEnterButton = checkGenerateEnter.Checked;
 
                     Config.passwordConfig.charString = tbCharEspecial.Text;
-                    Config.passwordConfig.letters = numLetras.Value;
-                    Config.passwordConfig.numbers = numNumeros.Value;
-                    Config.passwordConfig.espChars = numCharEspeciais.Value;
+                    Config.passwordConfig.letters = (int) numLetras.Value;
+                    Config.passwordConfig.numbers = (int) numNumeros.Value;
+                    Config.passwordConfig.espChars = (int) numCharEspeciais.Value;
                     Config.passwordConfig.randomChars = rbRandom.Checked;
 
                     new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(Config, @"data/config.data");

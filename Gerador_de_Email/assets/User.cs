@@ -33,7 +33,6 @@ namespace Gerador_de_Email.assets
         public string Senha { get { return _senha; } set { _senha = value; } }
         public string CPF { get { return _cpf; } set { _cpf = value; } }
         public string Observacao { get { return _observacao; } set { _observacao = value; } }
-        public PassConfig ConfigSenha { get { return _configSenha; } set { _configSenha = value; } }
 
         /// <summary>
         /// Construtor do objeto User (Usuário).
@@ -53,10 +52,10 @@ namespace Gerador_de_Email.assets
             this._dominioEmail = dominio;
             this._local = local;
             this._cargo = cargo;
-            this._senha = CreatePassword();
+            this._senha = CreatePassword(senhaConfig.letters, senhaConfig.numbers);
 
             if (senha == "")
-                CreatePassword();
+                CreatePassword(senhaConfig.letters, senhaConfig.numbers);
             else
             {
                 this._senha = senha;
@@ -71,6 +70,7 @@ namespace Gerador_de_Email.assets
             this._email = this._usuario + this._dominioEmail;
             this._cpf = cpf;
             this._observacao = observacao;
+
         }
 
         /// <summary>
@@ -87,12 +87,10 @@ namespace Gerador_de_Email.assets
             this._email = " ";
             this._cpf = " ";
             this._observacao = " ";
-            this.ConfigSenha = new PassConfig();
         }
 
-        private string CreatePassword()
+        private string CreatePassword(int str, int num)
         {
-            int str = (int)ConfigSenha.letters, num = (int)ConfigSenha.numbers;
             const string validTXT = "abcdefghijklmnopqrstuvwxyz";
             const string validNUM = "1234567890";
 

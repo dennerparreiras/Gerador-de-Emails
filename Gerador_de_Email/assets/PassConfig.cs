@@ -10,9 +10,9 @@ namespace Gerador_de_Email.assets
     public class PassConfig
     {
         public string charString { get; set; }
-        public decimal letters { get; set; }
-        public decimal numbers { get; set; }
-        public decimal espChars { get; set; }
+        public int letters { get; set; }
+        public int numbers { get; set; }
+        public int espChars { get; set; }
         public bool randomChars { get; set; }
 
         public PassConfig()
@@ -23,7 +23,7 @@ namespace Gerador_de_Email.assets
             this.espChars = 0;
             this.randomChars = false;
         }
-        public PassConfig(string a, decimal b, decimal c, decimal d, bool e)
+        public PassConfig(string a, int b, int c, int d, bool e)
         {
             this.charString = a;
             this.letters = b;
