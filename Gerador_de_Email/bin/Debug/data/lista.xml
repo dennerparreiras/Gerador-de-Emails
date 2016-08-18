@@ -44,4 +44,13 @@
     <CPF>785,264,223-23</CPF>
     <Observacao />
   </User>
+  <User>
+    <Local>ATERPA - CIL</Local>
+    <Usuario>diogo.pitibull</Usuario>
+    <Email>diogo.pitibull@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Diogo Froxo da Silva Pitibull</Nome>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
 </ArrayOfUser>

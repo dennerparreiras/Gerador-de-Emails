@@ -51,11 +51,18 @@ namespace Gerador_de_Email.assets
             this._nome = nome;
             this._dominioEmail = dominio;
             this._local = local;
-            this._cargo = cargo;
-            this._senha = CreatePassword(senhaConfig.letters, senhaConfig.numbers);
 
             if (senha == "")
-                CreatePassword(senhaConfig.letters, senhaConfig.numbers);
+            {
+                if (senhaConfig.charString == "" || senhaConfig.charString == " ")
+                {
+                    this._senha.CreatePassword(senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars);
+                }
+                else
+                {
+                    this._senha.CreatePassword(senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars, senhaConfig.charString);
+                }
+            }
             else
             {
                 this._senha = senha;

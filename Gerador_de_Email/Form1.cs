@@ -85,7 +85,7 @@ namespace Gerador_de_Email
                 cbEmail.DataSource = dataSourceDom;
                 cbLocal.DataSource = dataSourceLoc;
             }
-            catch (Exception erro)
+            catch //(Exception erro)
             {
                 //MessageBox.Show(erro.Message, "Falha na atribuição de dados nos selects!");
             }
@@ -179,18 +179,37 @@ namespace Gerador_de_Email
         private void btGenerate_Click(object sender, EventArgs e)
         {
             progressBar.Value = 0;
+            assets.ADHelper.ADConfig aux = config.configAD;
+            progressBar.Value = 5;
+            assets.ADHelper.ActiveDirectoryHelper helper = new assets.ADHelper.ActiveDirectoryHelper(ref aux);
+            progressBar.Value = 25;
             if (VerifyFields())
             {
-                progressBar.Value = 25;
                 User auxUser = new User(FileManager.CapitalizarNome(tbNome.Text), mtbCPF.Text, cbLocal.Text, tbCargo.Text, tbEmail.Text, cbEmail.Text, tbSenha.Text, tbObservacoes.Text, config.passwordConfig);
-                progressBar.Value = 75;
-                usuarios.Add(auxUser);
-                tbReturn.Text += PrintUserData(auxUser);
-                progressBar.Value = 80;
-                notifyIcon1.BalloonTipText = "Usuário " + auxUser.Usuario + " criado!";
-                notifyIcon1.ShowBalloonTip(250);
-                progressBar.Value = 95;
-                ClearFields();
+                progressBar.Value = 50;
+                assets.ADHelper.ADUserDetail verifyLoginAD = helper.GetUserByLoginName(auxUser.Usuario);
+                progressBar.Value = 60;
+                assets.ADHelper.ADUserDetail verifyNameAD = helper.GetUserByFullName(auxUser.Nome);
+                progressBar.Value = 70;
+                if (verifyLoginAD != null || verifyNameAD != null)
+                {
+                    string msg = "Não foi possível criar o usuário:\r\n\r\n";
+                    if (verifyLoginAD != null)
+                        msg += "---> Este login de usuário já existe.\r\n";
+                    if (verifyNameAD != null)
+                        msg += "---> Existe um usuário já cadastrado com este nome.\r\n";
+                    MessageBox.Show(msg);
+                }
+                else
+                {
+                    usuarios.Add(auxUser);
+                    tbReturn.Text += PrintUserData(auxUser);
+                    progressBar.Value = 80;
+                    notifyIcon1.BalloonTipText = "Usuário " + auxUser.Usuario + " criado!";
+                    notifyIcon1.ShowBalloonTip(250);
+                    progressBar.Value = 95;
+                    ClearFields();
+                }
             }
             progressBar.Value = 100;
         }

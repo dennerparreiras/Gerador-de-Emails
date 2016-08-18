@@ -21,6 +21,7 @@ namespace Gerador_de_Email.forms
             Config = param;
 
             InitializeComponent();
+            groupBoxAD.BackColor = Color.Transparent;
             groupBox1.BackColor = Color.Transparent;
             groupBox2.BackColor = Color.Transparent;
             groupBox3.BackColor = Color.Transparent;
@@ -42,13 +43,25 @@ namespace Gerador_de_Email.forms
             numCharEspeciais.Value = Config.passwordConfig.espChars;
             rbRandom.Checked = Config.passwordConfig.randomChars;
 
-            this.Visible = false;
+            try
+            {
+                tbADpath.Text = Config.configAD.LDAPPath;
+                tbADuser.Text = Config.configAD.LDAPUser;
+                tbADpasswd.Text = MD5Crypt.Decript(Config.configAD.LDAPPassword);
+                tbADdominio.Text = Config.configAD.LDAPDomain;
+            }
+            catch
+            {
+                tbADpath.Text = "    ";
+                tbADuser.Text = "    ";
+                tbADpasswd.Text = "    ";
+                tbDominio.Text = "    ";
+            }
         }
 
         private void ParametersForm_Load(object sender, EventArgs e)
         {
-            System.Threading.Thread.Sleep(500);
-            this.Visible = true;
+          
         }
 
         private void Verify(string ShortFilePath)
@@ -89,6 +102,12 @@ namespace Gerador_de_Email.forms
                     Config.passwordConfig.numbers = (int) numNumeros.Value;
                     Config.passwordConfig.espChars = (int) numCharEspeciais.Value;
                     Config.passwordConfig.randomChars = rbRandom.Checked;
+
+                    Config.configAD = new assets.ADHelper.ADConfig();
+                    Config.configAD.LDAPPath = tbADpath.Text;
+                    Config.configAD.LDAPUser = tbADuser.Text;
+                    Config.configAD.LDAPPassword = MD5Crypt.Encrypt(tbADpasswd.Text);
+                    Config.configAD.LDAPDomain = tbADdominio.Text;
 
                     new CustomBinarySerializer<Parameters>().SerializeToBinaryFile(Config, @"data/config.data");
 

@@ -49,7 +49,7 @@ namespace Gerador_de_Email
             }
             catch
             {
-                System.Windows.Forms.MessageBox.Show("Falha ao deserializar o arquivo.");
+                throw new System.ArgumentException("Falha ao deserializar o arquivo.");
             }
             return retorno;
         }

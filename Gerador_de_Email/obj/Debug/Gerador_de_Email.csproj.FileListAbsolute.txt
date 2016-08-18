@@ -30,11 +30,6 @@ E:\Backups\Documents\Visual Studio 2015\Projects\Gerador_de_Email - Cópia\Gerad
 E:\Backups\Documents\Visual Studio 2015\Projects\Gerador_de_Email - Cópia\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.ReportForm.resources
 E:\Backups\Documents\Visual Studio 2015\Projects\Gerador_de_Email - Cópia\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.searchForm.resources
 E:\Backups\Documents\Visual Studio 2015\Projects\Gerador_de_Email - Cópia\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.AboutForm.resources
-E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe.config
-E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.exe
-E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.pdb
-E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe
-E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.pdb
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csprojResolveAssemblyReference.cache
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.MainForm.resources
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.AboutForm.resources
@@ -43,11 +38,6 @@ E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.searchForm.resources
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.Properties.Resources.resources
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csproj.GenerateResource.Cache
-E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.TrustInfo.xml
-E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe.manifest
-E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.application
-E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.exe.manifest
-E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.application
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.ParametersForm.resources
 C:\workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe.config
 C:\workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.exe
@@ -68,3 +58,13 @@ C:\workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.exe
 C:\workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador_de_Email.pdb
 C:\workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.exe.manifest
 C:\workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.application
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.config
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.manifest
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.application
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe
+E:\projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.pdb
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.TrustInfo.xml
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe.manifest
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.application
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe
+E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb

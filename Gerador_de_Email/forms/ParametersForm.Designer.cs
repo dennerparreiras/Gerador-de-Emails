@@ -72,6 +72,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.numNumeros = new System.Windows.Forms.NumericUpDown();
             this.numLetras = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxAD = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbADpath = new System.Windows.Forms.TextBox();
+            this.tbADdominio = new System.Windows.Forms.TextBox();
+            this.tbADuser = new System.Windows.Forms.TextBox();
+            this.tbADpasswd = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -79,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numCharEspeciais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumeros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLetras)).BeginInit();
+            this.groupBoxAD.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -378,9 +388,9 @@
             this.groupBox2.Controls.Add(this.checkAdm);
             this.groupBox2.Controls.Add(this.checkMinim);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 212);
+            this.groupBox2.Location = new System.Drawing.Point(12, 351);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(323, 279);
+            this.groupBox2.Size = new System.Drawing.Size(323, 140);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Outras opções";
@@ -389,7 +399,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label10.Location = new System.Drawing.Point(22, 139);
+            this.label10.Location = new System.Drawing.Point(22, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(239, 12);
             this.label10.TabIndex = 2;
@@ -398,7 +408,7 @@
             // checkGenerateEnter
             // 
             this.checkGenerateEnter.AutoSize = true;
-            this.checkGenerateEnter.Location = new System.Drawing.Point(24, 120);
+            this.checkGenerateEnter.Location = new System.Drawing.Point(24, 93);
             this.checkGenerateEnter.Name = "checkGenerateEnter";
             this.checkGenerateEnter.Size = new System.Drawing.Size(242, 17);
             this.checkGenerateEnter.TabIndex = 1;
@@ -628,6 +638,90 @@
             0,
             0});
             // 
+            // groupBoxAD
+            // 
+            this.groupBoxAD.BackColor = System.Drawing.Color.Navy;
+            this.groupBoxAD.Controls.Add(this.tbADpasswd);
+            this.groupBoxAD.Controls.Add(this.tbADuser);
+            this.groupBoxAD.Controls.Add(this.tbADdominio);
+            this.groupBoxAD.Controls.Add(this.tbADpath);
+            this.groupBoxAD.Controls.Add(this.label14);
+            this.groupBoxAD.Controls.Add(this.label13);
+            this.groupBoxAD.Controls.Add(this.label12);
+            this.groupBoxAD.Controls.Add(this.label11);
+            this.groupBoxAD.ForeColor = System.Drawing.Color.White;
+            this.groupBoxAD.Location = new System.Drawing.Point(12, 212);
+            this.groupBoxAD.Name = "groupBoxAD";
+            this.groupBoxAD.Size = new System.Drawing.Size(323, 133);
+            this.groupBoxAD.TabIndex = 3;
+            this.groupBoxAD.TabStop = false;
+            this.groupBoxAD.Text = "Opções do Active Directory";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Caminho";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Usuário";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 100);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Senha";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(45, 13);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Dominio";
+            // 
+            // tbADpath
+            // 
+            this.tbADpath.Location = new System.Drawing.Point(71, 19);
+            this.tbADpath.Name = "tbADpath";
+            this.tbADpath.Size = new System.Drawing.Size(225, 20);
+            this.tbADpath.TabIndex = 21;
+            // 
+            // tbADdominio
+            // 
+            this.tbADdominio.Location = new System.Drawing.Point(71, 45);
+            this.tbADdominio.Name = "tbADdominio";
+            this.tbADdominio.Size = new System.Drawing.Size(225, 20);
+            this.tbADdominio.TabIndex = 21;
+            // 
+            // tbADuser
+            // 
+            this.tbADuser.Location = new System.Drawing.Point(71, 71);
+            this.tbADuser.Name = "tbADuser";
+            this.tbADuser.Size = new System.Drawing.Size(225, 20);
+            this.tbADuser.TabIndex = 21;
+            // 
+            // tbADpasswd
+            // 
+            this.tbADpasswd.Location = new System.Drawing.Point(71, 97);
+            this.tbADpasswd.Name = "tbADpasswd";
+            this.tbADpasswd.PasswordChar = '●';
+            this.tbADpasswd.Size = new System.Drawing.Size(225, 20);
+            this.tbADpasswd.TabIndex = 22;
+            // 
             // ParametersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +731,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
+            this.Controls.Add(this.groupBoxAD);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -655,6 +750,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numCharEspeciais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumeros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLetras)).EndInit();
+            this.groupBoxAD.ResumeLayout(false);
+            this.groupBoxAD.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -704,5 +801,14 @@
         private System.Windows.Forms.CheckBox checkDeleteUserBt;
         private System.Windows.Forms.CheckBox checkGenerateEnter;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBoxAD;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox tbADpasswd;
+        private System.Windows.Forms.TextBox tbADuser;
+        private System.Windows.Forms.TextBox tbADdominio;
+        private System.Windows.Forms.TextBox tbADpath;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }

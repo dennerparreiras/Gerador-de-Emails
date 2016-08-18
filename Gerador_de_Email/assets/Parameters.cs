@@ -19,6 +19,7 @@ namespace Gerador_de_Email.assets
         public bool deleteUserButton { get; set; }
         public bool generateEnterButton { get; set; }
 
+        public ADHelper.ADConfig configAD { get; set; }
         public PassConfig passwordConfig { get; set; }
 
         public Parameters()
@@ -33,6 +34,7 @@ namespace Gerador_de_Email.assets
             this.deleteUserButton = false;
             this.generateEnterButton = false;
             this.passwordConfig = new PassConfig();
+            this.configAD = new ADHelper.ADConfig();
         }
     }
 }
