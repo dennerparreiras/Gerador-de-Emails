@@ -56,11 +56,11 @@ namespace Gerador_de_Email.assets
             {
                 if (senhaConfig.charString == "" || senhaConfig.charString == " ")
                 {
-                    this._senha.CreatePassword(senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars);
+                    this._senha = Password.CreatePassword(this._senha, senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars);
                 }
                 else
                 {
-                    this._senha.CreatePassword(senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars, senhaConfig.charString);
+                    this._senha = Password.CreatePassword(this._senha, senhaConfig.letters, senhaConfig.numbers, senhaConfig.espChars, !senhaConfig.randomChars, senhaConfig.charString);
                 }
             }
             else
@@ -95,7 +95,7 @@ namespace Gerador_de_Email.assets
             this._cpf = " ";
             this._observacao = " ";
         }
-
+        /*
         private string CreatePassword(int str, int num)
         {
             const string validTXT = "abcdefghijklmnopqrstuvwxyz";
@@ -113,7 +113,7 @@ namespace Gerador_de_Email.assets
             }
             return res.ToString();
         }
-
+        */
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -125,11 +125,11 @@ namespace Gerador_de_Email.assets
             sb.Append("Email: " + this._email + "\r\n");
             sb.Append("Senha: " + this._senha + "\r\n");
 
-            if (_cargo != "")
+            if (_cargo != "" && _cargo != " " && _cargo != null)
                 sb.Append("Cargo: " + this._cargo + "\r\n");
             if (_cpf != "   ,   ,   -")
                 sb.Append("CPF: " + this._cpf + "\r\n");
-            if (_observacao != "")
+            if (this._observacao != "" && this._observacao != " " && this._observacao != null)
                 sb.Append("Observação: " + this._observacao + "\r\n");
             sb.Append("\r\n");
             return sb.ToString();

@@ -130,6 +130,17 @@ namespace Gerador_de_Email
             //Definir tecla enter para gerar dados de usuário
             if (config.generateEnterButton)
                 this.AcceptButton = btGenerate;
+
+            //Caso não exista o arquivo da lista de dominios, a lista passa a ser criada
+            if (!File.Exists(config.listDomain))
+            {
+                new FileStream(new Parameters().listDomain, FileMode.CreateNew);
+            }
+            //Caso não exista o arquivo da lista de dominios, a lista passa a ser criada
+            if (!File.Exists(config.listPlace))
+            {
+                new FileStream(new Parameters().listPlace, FileMode.CreateNew);
+            }
         }
 
         /// <summary>

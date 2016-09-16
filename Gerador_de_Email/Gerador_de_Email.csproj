@@ -101,7 +101,7 @@
     <Compile Include="assets\MD5Crypt.cs" />
     <Compile Include="assets\Parameters.cs" />
     <Compile Include="assets\PassConfig.cs" />
-    <Compile Include="assets\Senha.cs" />
+    <Compile Include="assets\Password.cs" />
     <Compile Include="assets\User.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

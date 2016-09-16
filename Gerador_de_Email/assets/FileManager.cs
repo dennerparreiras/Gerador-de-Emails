@@ -17,16 +17,11 @@ namespace Gerador_de_Email.assets
             string[] lines = null;
             try
             {
-                //byte[] bytes = null;
                 lines = System.IO.File.ReadAllLines(path);
-                //for (int i = 0; i < lines.Length; i++){
-                //    bytes = Encoding.Default.GetBytes(lines[i]);
-                //    lines[i] = Encoding.UTF8.GetString(bytes);
-                //}
             }
             catch
             {
-                System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
+                //System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
             }
             return lines;
         }
@@ -44,7 +39,7 @@ namespace Gerador_de_Email.assets
             }
             catch
             {
-                System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
+                //System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
             }
         }
 
@@ -64,7 +59,7 @@ namespace Gerador_de_Email.assets
                 }
                 catch
                 {
-                    System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
+                    //System.Windows.Forms.MessageBox.Show("Arquivo '" + path + "' não encontrado!");
                 }
             }
         }

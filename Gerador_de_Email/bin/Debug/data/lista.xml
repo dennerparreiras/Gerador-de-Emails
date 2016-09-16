@@ -1,56 +1,100 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <User>
+    <Cargo>Departamento Pessoal</Cargo>
+    <Local>ATERPA - Escritorio Central</Local>
+    <Usuario>cristiane.reis</Usuario>
+    <Email>cristiane.reis@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Cristiane Aline Silva Reis</Nome>
+    <Senha>tj8688</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao>Acessos devem ser iguais ao da Fabiana (DP).</Observacao>
+  </User>
+  <User>
+    <Cargo>Estagiário de Engenharia Mecânica</Cargo>
+    <Local>ATERPA - CIL</Local>
+    <Usuario>gustavo.couto</Usuario>
+    <Email>gustavo.couto@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Gustavo Augusto Rezende Couto</Nome>
+    <Senha>fw8194</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao>Ele irá trabalhar no CIL (4º andar) no lugar de Lucas Andrade Jorge (Estagiário de Engenharia Mecânica).</Observacao>
+  </User>
+  <User>
     <Cargo />
-    <Local>ATERPA - CIL</Local>
-    <Usuario>denner.aleixo</Usuario>
-    <Email>denner.aleixo@aterpa.com.br</Email>
+    <Local>Obra C305 - Consorcio JDantas</Local>
+    <Usuario>francisco.fonseca</Usuario>
+    <Email>francisco.fonseca@jdantas.com.br</Email>
+    <DominioEmail>@jdantas.com.br</DominioEmail>
+    <Nome>Francisco Eduardo Brescia Fonseca</Nome>
+    <Senha>A senha do usuário já existe</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao>Reativação do usuário. Transferido para obra da JDantas.</Observacao>
+  </User>
+  <User>
+    <Cargo />
+    <Local>Obra C305 - Consorcio JDantas</Local>
+    <Usuario>gustavo.santos</Usuario>
+    <Email>gustavo.santos@jdantas.com.br</Email>
+    <DominioEmail>@jdantas.com.br</DominioEmail>
+    <Nome>Gustavo Cambraia Santos</Nome>
+    <Senha>A senha do usuário já existe</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao>Reativação do usuário. Transferido para obra da JDantas.</Observacao>
+  </User>
+  <User>
+    <Cargo>Apropriador</Cargo>
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>andre.amorim</Usuario>
+    <Email>andre.amorim@aterpa.com.br</Email>
     <DominioEmail>@aterpa.com.br</DominioEmail>
-    <Nome>Denner Parreiras Aleixo</Nome>
-    <Senha>yldry15020</Senha>
-    <CPF>874,946,635-90</CPF>
-    <Observacao />
+    <Nome>André Henrique Tavares Amorim</Nome>
+    <Senha>kh1889</Senha>
+    <CPF>108,842,396-59</CPF>
+    <Observacao>Matricula : 36712</Observacao>
   </User>
   <User>
-    <Cargo>CEO</Cargo>
-    <Local>VSN - Escritorio Central</Local>
-    <Usuario>arthur.nascimento</Usuario>
-    <Email>arthur.nascimento@arthurvsn.com.br</Email>
-    <DominioEmail>@arthurvsn.com.br</DominioEmail>
-    <Nome>Arthur Vinicius Silva Nascimento</Nome>
-    <Senha>tutuzim</Senha>
-    <CPF>896,582,562-46</CPF>
-    <Observacao />
-  </User>
-  <User>
-    <Cargo>CEO</Cargo>
-    <Local>Tangela Corps - Escritorio Central</Local>
-    <Usuario>wagner.tangela</Usuario>
-    <Email>wagner.tangela@tangela.com.br</Email>
-    <DominioEmail>@tangela.com.br</DominioEmail>
-    <Nome>Wagner Tangela Santos</Nome>
-    <Senha>souTangela</Senha>
-    <CPF>762,452,148-75</CPF>
-    <Observacao />
-  </User>
-  <User>
-    <Cargo>Degustador</Cargo>
-    <Local>Nissin Alimentos - Escritorio Central</Local>
-    <Usuario>miojo</Usuario>
-    <Email>miojo@nissin.com.br</Email>
-    <DominioEmail>@nissin.com.br</DominioEmail>
-    <Nome>Arthur Miojo Vilaça Fonseca</Nome>
-    <Senha>meganfox</Senha>
-    <CPF>785,264,223-23</CPF>
-    <Observacao />
-  </User>
-  <User>
-    <Local>ATERPA - CIL</Local>
-    <Usuario>diogo.pitibull</Usuario>
-    <Email>diogo.pitibull@aterpa.com.br</Email>
-    <DominioEmail>@aterpa.com.br</DominioEmail>
-    <Nome>Diogo Froxo da Silva Pitibull</Nome>
+    <Cargo>Estagiária Técnica</Cargo>
+    <Local>SERRA - Escritorio Central</Local>
+    <Usuario>ana.souza</Usuario>
+    <Email>ana.souza@serraambiental.com.br</Email>
+    <DominioEmail>@serraambiental.com.br</DominioEmail>
+    <Nome>Ana Vivia Gomes de Souza</Nome>
+    <Senha>qe5580</Senha>
     <CPF>   ,   ,   -</CPF>
     <Observacao />
+  </User>
+  <User>
+    <Cargo>Técnico Eletromecânica</Cargo>
+    <Local>Obra A298- Consorcio Sonel x A</Local>
+    <Usuario>deyvid.miranda</Usuario>
+    <Email>deyvid.miranda@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Deyvid Andrade Miranda</Nome>
+    <Senha>xo0890</Senha>
+    <CPF>   ,   ,   -</CPF>
+    <Observacao />
+  </User>
+  <User>
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>sarah.mayrink</Usuario>
+    <Email>sarah.mayrink@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Sarah Catharina Serejo Mayrink</Nome>
+    <Senha>tt4339</Senha>
+    <CPF>035,508,333-77</CPF>
+    <Observacao>Matrícula: 036735</Observacao>
+  </User>
+  <User>
+    <Local>Obra A306 - Duplic. Ferrovia</Local>
+    <Usuario>carlos.zika</Usuario>
+    <Email>carlos.zika@aterpa.com.br</Email>
+    <DominioEmail>@aterpa.com.br</DominioEmail>
+    <Nome>Carlos Henrique Zika</Nome>
+    <Senha>jaexiste</Senha>
+    <CPF>102,915,446-57</CPF>
+    <Observacao>Matricula: 36766</Observacao>
   </User>
 </ArrayOfUser>
