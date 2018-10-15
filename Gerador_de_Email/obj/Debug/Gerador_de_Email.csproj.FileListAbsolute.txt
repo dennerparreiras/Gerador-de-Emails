@@ -68,3 +68,6 @@ E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe.ma
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.application
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe
 E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb
+E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.config
+E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe
+E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb
