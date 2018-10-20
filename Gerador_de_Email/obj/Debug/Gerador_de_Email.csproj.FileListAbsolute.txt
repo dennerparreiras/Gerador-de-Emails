@@ -71,3 +71,23 @@ E:\projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb
 E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.config
 E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe
 E:\projects\Other Projects\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.config
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe.manifest
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.application
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.exe
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\bin\Debug\Gerador de Email.pdb
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csprojAssemblyReference.cache
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.MainForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.AboutForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.logForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.ParametersForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.ReportForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.forms.searchForm.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.Properties.Resources.resources
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csproj.GenerateResource.cache
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador_de_Email.csproj.CoreCompileInputs.cache
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.TrustInfo.xml
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe.manifest
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.application
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.exe
+B:\Developer Area\Workspace\geradordeusuarios\Gerador_de_Email\obj\Debug\Gerador de Email.pdb
