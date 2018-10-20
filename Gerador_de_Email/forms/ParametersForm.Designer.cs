@@ -37,7 +37,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbIcone = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbLog = new System.Windows.Forms.TextBox();
@@ -73,14 +72,15 @@
             this.numNumeros = new System.Windows.Forms.NumericUpDown();
             this.numLetras = new System.Windows.Forms.NumericUpDown();
             this.groupBoxAD = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbADpath = new System.Windows.Forms.TextBox();
-            this.tbADdominio = new System.Windows.Forms.TextBox();
-            this.tbADuser = new System.Windows.Forms.TextBox();
             this.tbADpasswd = new System.Windows.Forms.MaskedTextBox();
+            this.tbADuser = new System.Windows.Forms.TextBox();
+            this.tbADdominio = new System.Windows.Forms.TextBox();
+            this.tbADpath = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,8 +141,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackColor = System.Drawing.Color.DarkBlue;
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,8 +156,7 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackColor = System.Drawing.Color.DarkBlue;
             this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,8 +171,7 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackColor = System.Drawing.Color.Green;
             this.button12.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,26 +200,9 @@
             this.tbIcone.Size = new System.Drawing.Size(298, 20);
             this.tbIcone.TabIndex = 17;
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(518, 104);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Default";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.DefaultLog);
-            // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackColor = System.Drawing.Color.Green;
             this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,8 +233,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackColor = System.Drawing.Color.DarkBlue;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,8 +248,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackColor = System.Drawing.Color.DarkBlue;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,8 +263,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackColor = System.Drawing.Color.DarkBlue;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,8 +278,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackColor = System.Drawing.Color.Green;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -333,8 +309,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackColor = System.Drawing.Color.Green;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,8 +340,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -447,8 +421,7 @@
             // 
             // btSalvar
             // 
-            this.btSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSalvar.BackgroundImage")));
+            this.btSalvar.BackColor = System.Drawing.Color.Green;
             this.btSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -463,7 +436,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.BackgroundImage = global::Gerador_de_Email.Properties.Resources.red_silk;
+            this.btCancelar.BackColor = System.Drawing.Color.DarkBlue;
             this.btCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,7 +446,7 @@
             this.btCancelar.Size = new System.Drawing.Size(115, 23);
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.Cancelar);
             // 
             // groupBox3
@@ -536,8 +509,7 @@
             // 
             // btDefaultPass
             // 
-            this.btDefaultPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btDefaultPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDefaultPass.BackgroundImage")));
+            this.btDefaultPass.BackColor = System.Drawing.Color.DarkBlue;
             this.btDefaultPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btDefaultPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDefaultPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -657,32 +629,34 @@
             this.groupBoxAD.TabStop = false;
             this.groupBoxAD.Text = "Opções do Active Directory";
             // 
-            // label11
+            // tbADpasswd
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Caminho";
+            this.tbADpasswd.Location = new System.Drawing.Point(71, 97);
+            this.tbADpasswd.Name = "tbADpasswd";
+            this.tbADpasswd.PasswordChar = '●';
+            this.tbADpasswd.Size = new System.Drawing.Size(225, 20);
+            this.tbADpasswd.TabIndex = 22;
             // 
-            // label12
+            // tbADuser
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Usuário";
+            this.tbADuser.Location = new System.Drawing.Point(71, 71);
+            this.tbADuser.Name = "tbADuser";
+            this.tbADuser.Size = new System.Drawing.Size(225, 20);
+            this.tbADuser.TabIndex = 21;
             // 
-            // label13
+            // tbADdominio
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 100);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 13);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Senha";
+            this.tbADdominio.Location = new System.Drawing.Point(71, 45);
+            this.tbADdominio.Name = "tbADdominio";
+            this.tbADdominio.Size = new System.Drawing.Size(225, 20);
+            this.tbADdominio.TabIndex = 21;
+            // 
+            // tbADpath
+            // 
+            this.tbADpath.Location = new System.Drawing.Point(71, 19);
+            this.tbADpath.Name = "tbADpath";
+            this.tbADpath.Size = new System.Drawing.Size(225, 20);
+            this.tbADpath.TabIndex = 21;
             // 
             // label14
             // 
@@ -693,34 +667,47 @@
             this.label14.TabIndex = 21;
             this.label14.Text = "Dominio";
             // 
-            // tbADpath
+            // label13
             // 
-            this.tbADpath.Location = new System.Drawing.Point(71, 19);
-            this.tbADpath.Name = "tbADpath";
-            this.tbADpath.Size = new System.Drawing.Size(225, 20);
-            this.tbADpath.TabIndex = 21;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 100);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Senha";
             // 
-            // tbADdominio
+            // label12
             // 
-            this.tbADdominio.Location = new System.Drawing.Point(71, 45);
-            this.tbADdominio.Name = "tbADdominio";
-            this.tbADdominio.Size = new System.Drawing.Size(225, 20);
-            this.tbADdominio.TabIndex = 21;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Usuário";
             // 
-            // tbADuser
+            // label11
             // 
-            this.tbADuser.Location = new System.Drawing.Point(71, 71);
-            this.tbADuser.Name = "tbADuser";
-            this.tbADuser.Size = new System.Drawing.Size(225, 20);
-            this.tbADuser.TabIndex = 21;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Caminho";
             // 
-            // tbADpasswd
+            // button9
             // 
-            this.tbADpasswd.Location = new System.Drawing.Point(71, 97);
-            this.tbADpasswd.Name = "tbADpasswd";
-            this.tbADpasswd.PasswordChar = '●';
-            this.tbADpasswd.Size = new System.Drawing.Size(225, 20);
-            this.tbADpasswd.TabIndex = 22;
+            this.button9.BackColor = System.Drawing.Color.DarkBlue;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(518, 104);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Default";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.DefaultLog);
             // 
             // ParametersForm
             // 
@@ -780,7 +767,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbIcone;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbLog;
@@ -810,5 +796,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button9;
     }
 }

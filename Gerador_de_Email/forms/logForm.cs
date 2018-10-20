@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gerador_de_Email.assets;
 using Gerador_de_Email.forms;
+using System.IO;
 
 namespace Gerador_de_Email.forms
 {
@@ -17,10 +18,20 @@ namespace Gerador_de_Email.forms
         public logForm()
         {
             InitializeComponent();
-            foreach (string s in FileManager.Read("data/log.denner"))
+
+            if (!File.Exists(@"data/log.denner"))
             {
-                tbRelaLog.Text += s + "\r\n";
+                new FileStream(@"data/log.denner", FileMode.CreateNew);
+                tbRelaLog.Text += " ";
             }
+            else
+            {
+                foreach (string s in FileManager.Read(@"data/log.denner"))
+                {
+                    tbRelaLog.Text += s + "\r\n";
+                }
+            }
+
         }
 
         private void btFechaRelat_Click(object sender, EventArgs e)
