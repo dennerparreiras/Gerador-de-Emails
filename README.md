@@ -1,5 +1,7 @@
-# geradordeusuarios
-Gerador de Usuários para criação de email.
+# Gerador de Usuarios de Email
+Gerador de Usuários para criação de usuários de email, com a possibilidade de conectar ao Active Directory para criar usuários para um domínio.
+
+As configurações do programa estão ocultas no ´Modo Normal´ e só são são reveladas no ´Modo de Administrador´. 
 
 Para digitar os comandos abaixo, clique em um botão oculto no extremo canto inferior esquerdo da tela inicial:
 
